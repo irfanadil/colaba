@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/colaba_red_color"
+    android:paddingBottom="22dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/customer_name_textfield"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_medium"
+        android:background="@color/colaba_primary_color_half_alpha"
+        android:textColor="@color/grey_color_one"
+        android:textSize="17sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loanPurposeTextView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/rubik_regular"
+        android:textColor="@color/colaba_apptheme_blue"
+        android:background="@color/colaba_primary_color_half_alpha"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/customer_name_textfield"
+        app:layout_constraintTop_toBottomOf="@+id/customer_name_textfield"
+        app:srcCompat="@drawable/tick_msg" />
+
+    <ImageView
+        android:id="@+id/open_inside_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/down_arrow" />
+
+    <ImageView
+        android:id="@+id/close_inside_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/up_arrow" />
+
+    <TextView
+        android:id="@+id/milestoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/application_started"
+        android:textColor="@color/grey_color_three"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/loanPurposeTextView" />
+
+    <TextView
+        android:id="@+id/cardTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/one_minute_ago"
+        android:textColor="@color/grey_color_four"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/customer_name_textfield"
+        app:layout_constraintEnd_toStartOf="@+id/loandotsImageView"
+        app:layout_constraintTop_toTopOf="@+id/customer_name_textfield" />
+
+    <ImageView
+        android:id="@+id/loandotsImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/customer_name_textfield"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/customer_name_textfield"
+        app:srcCompat="@drawable/vdots" />
+
+    <TextView
+        android:id="@+id/docsToReviewTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/docs_to_review"
+        android:textColor="@color/colaba_red_color"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/milestoneTextView"
+        app:layout_constraintTop_toBottomOf="@+id/milestoneTextView" />
+
+    <TextView
+        android:id="@+id/coBorrowerCountTextView"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/rubik_regular"
+
+        android:background="@color/colaba_primary_color_half_alpha"
+        android:textColor="@color/grey_color_three"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/customer_name_textfield"
+        app:layout_constraintStart_toEndOf="@+id/customer_name_textfield" />
+</androidx.constraintlayout.widget.ConstraintLayout>

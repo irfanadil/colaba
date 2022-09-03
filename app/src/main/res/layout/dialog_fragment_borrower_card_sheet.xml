@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_white_shape"
+    android:paddingBottom="40dp"
+    >
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/crossImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borrowerName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/borrowerName"
+        app:srcCompat="@drawable/search_cross" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/appLayout"
+
+        app:layout_constraintStart_toStartOf="@+id/borrowerName"
+        app:layout_constraintTop_toBottomOf="@+id/sortBySepartor"
+        >
+
+        <ImageView
+            android:id="@+id/pending_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/application_icon" />
+
+        <TextView
+            android:id="@+id/pendingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/application"
+            android:fontFamily="@font/rubik_medium"
+            android:textSize="14sp"
+            android:textColor="@color/grey_color_two"
+            app:layout_constraintBottom_toBottomOf="@+id/pending_icon"
+            app:layout_constraintStart_toEndOf="@+id/pending_icon"
+            app:layout_constraintTop_toTopOf="@+id/pending_icon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/borrowerName"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="@string/richard"
+        android:textColor="@color/grey_color_one"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/sortBySepartor"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/loan_view_holder_separator"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/convoLayout"
+
+        app:layout_constraintStart_toStartOf="@+id/docLayout"
+        app:layout_constraintTop_toBottomOf="@+id/docLayout"
+        >
+
+
+        <ImageView
+            android:id="@+id/borrowerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/convo_icon" />
+
+    <TextView
+        android:id="@+id/borroweratoz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/conversation"
+        android:textColor="@color/grey_color_two"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/borrowerIcon"
+        app:layout_constraintStart_toEndOf="@+id/borrowerIcon"
+        app:layout_constraintTop_toTopOf="@+id/borrowerIcon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/archiveLayout"
+
+        app:layout_constraintStart_toStartOf="@+id/convoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/convoLayout"
+        >
+
+        <ImageView
+            android:id="@+id/borrowerIconReverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/archive_icon" />
+
+    <TextView
+        android:id="@+id/borrowerztoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/archive"
+        android:textColor="@color/grey_color_two"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/borrowerIconReverse"
+        app:layout_constraintStart_toEndOf="@+id/borrowerIconReverse"
+        app:layout_constraintTop_toTopOf="@+id/borrowerIconReverse" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/docLayout"
+
+        app:layout_constraintStart_toStartOf="@+id/borrowerName"
+        app:layout_constraintTop_toBottomOf="@+id/appLayout"
+        >
+
+        <ImageView
+            android:id="@+id/recentIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/docs_icon" />
+
+    <TextView
+        android:id="@+id/recentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/documents"
+        android:textColor="@color/grey_color_two"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recentIcon"
+        app:layout_constraintStart_toEndOf="@+id/recentIcon"
+        app:layout_constraintTop_toTopOf="@+id/recentIcon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/plus_three"
+        android:textColor="@color/grey_color_two"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/borrowerName"
+        app:layout_constraintStart_toEndOf="@+id/borrowerName"
+        app:layout_constraintTop_toTopOf="@+id/borrowerName"
+    />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+
+        app:layout_constraintEnd_toStartOf="@+id/crossImageView"
+        app:layout_constraintStart_toStartOf="@+id/borrowerName"
+        app:layout_constraintTop_toBottomOf="@+id/borrowerName">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomEmailConstraintLayout"
+            android:padding="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sheet_email_icon" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/email"
+                android:textColor="@color/grey_color_one"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView27"
+                app:layout_constraintStart_toEndOf="@+id/imageView27"
+                app:layout_constraintTop_toTopOf="@+id/imageView27" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomPhoneConstraintLayout"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="78dp"
+            app:layout_constraintStart_toEndOf="@+id/bottomEmailConstraintLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/imageView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/sheet_phone_icon" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="27dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/call"
+                android:textColor="@color/grey_color_one"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView28"
+                app:layout_constraintStart_toEndOf="@+id/imageView28"
+                app:layout_constraintTop_toTopOf="@+id/imageView28" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomMessageConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:padding="4dp"
+            app:layout_constraintStart_toEndOf="@+id/bottomPhoneConstraintLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/imageView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/sheet_msg_icon" />
+
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/text"
+                android:textColor="@color/grey_color_one"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+                app:layout_constraintStart_toEndOf="@+id/imageView29"
+                app:layout_constraintTop_toTopOf="@+id/imageView29" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+
+    <ImageView
+        android:id="@+id/take_image_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/search_icon"
+        app:layout_constraintStart_toStartOf="sortByBarrier"
+        app:layout_constraintTop_toTopOf="sortByBarrier"
+        app:tint="@color/colaba_primary_color" />
+
+    <TextView
+        android:id="@+id/take_image_label"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Take image"
+        app:layout_constraintBottom_toBottomOf="@+id/take_image_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/take_image_icon"
+        app:layout_constraintTop_toTopOf="@+id/take_image_icon" />
+
+    <View
+        android:id="@+id/take_image_click_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@id/take_image_barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/take_image_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="10dp"
+        app:constraint_referenced_ids="take_image_icon" />
+
+    <ImageView
+        android:id="@+id/select_image_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/filter_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/take_image_barrier"
+        app:tint="@color/colaba_primary_color" />
+
+    <TextView
+        android:id="@+id/select_image_label"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Select image from gallery"
+        app:layout_constraintBottom_toBottomOf="@+id/select_image_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/select_image_icon"
+        app:layout_constraintTop_toTopOf="@+id/select_image_icon" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colaba_primary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/take_image_icon"
+        app:layout_constraintTop_toBottomOf="@+id/take_image_barrier" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/select_image_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="16dp"
+        app:constraint_referenced_ids="select_image_icon" />
+
+    <View
+        android:id="@+id/select_image_click_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@id/select_image_barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/take_image_barrier" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/select_image_barrier" />
+
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

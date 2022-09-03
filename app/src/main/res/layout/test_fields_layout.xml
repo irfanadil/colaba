@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stateCompleteTextInputLayout"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:gravity="left"
+        android:textColorHint="@color/grey_color_three"
+        android:hint="@string/state"
+        android:paddingStart="-17dp"
+
+        app:boxStrokeColor="@null"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintTextColor="@color/grey_color_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:endIconDrawable="@drawable/ic_down_arrow"
+        app:endIconMode="custom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:endIconTint="@color/grey_color_three"
+        >
+
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/stateCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:paddingStart="0dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/grey_color_three"
+        android:completionThreshold="1"
+
+
+        android:cursorVisible="false"
+        android:drawableEnd="@drawable/ic_down_arrow"
+
+        android:dropDownAnchor="@+id/stateCompleteTextView"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/rubik_regular"
+        android:padding="0dp"
+        android:spinnerMode="dropdown"
+
+
+        android:textAlignment="viewStart"
+        android:textColor="@color/grey_color_one"
+        android:textColorHint="@color/grey_color_three"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_home_num"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/rubik_light"
+        android:hint="@string/home_number"
+        android:textColorHint="@color/primary_info_label_color"
+        app:boxCollapsedPaddingTop="1dp"
+        app:boxStrokeColor="@color/primary_info_line_color"
+        app:boxStrokeWidth="0.5dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:helperTextEnabled="true"
+
+        app:helperTextTextAppearance="@style/inputError"
+        app:helperTextTextColor="@color/colaba_red_color"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stateCompleteTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_home_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:digits="1234567890-()"
+            android:ems="10"
+            android:fontFamily="@font/rubik_regular"
+            android:imeOptions="actionDone"
+
+            android:inputType="number"
+            android:maxLength="14"
+            android:paddingStart="0dp"
+            android:singleLine="true"
+            android:textColor="@color/grey_color_one"
+            android:textSize="@dimen/ed_txt_size_primary_info" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:paddingStart="0dp"
+            android:paddingTop="26dp"
+            android:hint="@string/mailing_address"
+            android:layout_height="64dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

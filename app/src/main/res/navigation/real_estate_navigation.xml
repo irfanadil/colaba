@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/realestate_navigation"
+    app:startDestination="@+id/navigation_realestate_owned">
+
+    <fragment
+        android:id="@+id/navigation_realestate_owned"
+        android:name="com.rnsoft.colabademo.RealEstateOwnedFragment"
+        android:label="@string/real_estate_owned"
+        tools:layout="@layout/real_estate_owned_layout">
+        <action
+            android:id="@+id/action_realestate_address"
+            app:destination="@id/navigation_realestate_address"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_realestate_first_mortgage"
+            app:destination="@id/nav_first_mortage"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_realestate_second_mortgage"
+            app:destination="@id/nav_sec_mortage"
+            app:enterAnim="@anim/slide_up" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_realestate_address"
+        android:name="com.rnsoft.colabademo.RealEstateAddressFragment"
+        android:label="@string/real_estate_owned"
+        tools:layout="@layout/common_address_layout">
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_first_mortage"
+        android:name="com.rnsoft.colabademo.RealEstateFirstMortgage"
+        android:label="@string/first_mortgage"
+        tools:layout="@layout/first_mortgage_layout" />
+
+    <fragment
+        android:id="@+id/nav_sec_mortage"
+        android:name="com.rnsoft.colabademo.RealEstateSecondMortgage"
+        android:label="@string/sec_mortgage"
+        tools:layout="@layout/real_estate_second_mortgage" />
+
+</navigation>

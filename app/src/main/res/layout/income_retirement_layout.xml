@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/half_white">
+
+    <include
+        android:id="@+id/header_income"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        layout="@layout/app_header_with_cross_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </include>
+
+    <ScrollView
+        android:id="@+id/scrollview_retirement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:isScrollContainer="false"
+        app:layout_constraintTop_toBottomOf="@+id/header_income"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/mainLayout_retirement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:paddingBottom="200dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_retirement"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/income_retirement_type"
+                android:textColorHint="@color/primary_info_label_color"
+                app:boxCollapsedPaddingTop="1dp"
+                app:boxStrokeColor="@color/primary_info_line_color"
+                app:boxStrokeWidth="0.5dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconDrawable="@drawable/ic_down_arrow"
+                app:endIconMode="custom"
+                app:endIconTint="@color/grey_color_three"
+                app:helperTextEnabled="true"
+                app:helperTextTextAppearance="@style/inputError"
+                app:helperTextTextColor="@color/colaba_red_color"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                app:hintTextColor="@color/grey_color_two">
+
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/tv_retirement_type"
+                    style="@style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:backgroundTint="@android:color/transparent"
+                    android:completionThreshold="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:cursorVisible="false"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="bottom"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/grey_color_one"
+                    android:textColorHint="@color/grey_color_three"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- employer name -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/layout_emp_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/rubik_light"
+                android:hint="@string/employer_name"
+                android:textColorHint="@color/primary_info_label_color"
+                app:boxCollapsedPaddingTop="1dp"
+                app:boxStrokeColor="@color/primary_info_line_color"
+                app:boxStrokeWidth="0.5dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:helperTextEnabled="true"
+                app:helperTextTextAppearance="@style/inputError"
+                app:helperTextTextColor="@color/colaba_red_color"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_emp_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:ems="10"
+                    android:fontFamily="@font/rubik_regular"
+                    android:imeOptions="actionNext"
+                    android:paddingStart="0dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="@dimen/ed_txt_size_primary_info" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/layout_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/rubik_light"
+                android:hint="Description"
+                android:textColorHint="@color/primary_info_label_color"
+                app:boxCollapsedPaddingTop="1dp"
+                app:boxStrokeColor="@color/primary_info_line_color"
+                app:boxStrokeWidth="0.5dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:helperTextEnabled="true"
+                app:helperTextTextAppearance="@style/inputError"
+                app:helperTextTextColor="@color/colaba_red_color"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:fontFamily="@font/rubik_regular"
+                    android:imeOptions="actionNext"
+                    android:paddingStart="0dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="@dimen/ed_txt_size_primary_info" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/layout_monthly_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/rubik_light"
+                android:hint="@string/monthly_income"
+                android:textColorHint="@color/primary_info_label_color"
+                app:boxCollapsedPaddingTop="1dp"
+                app:boxStrokeColor="@color/primary_info_line_color"
+                app:boxStrokeWidth="0.5dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:helperTextEnabled="true"
+                app:helperTextTextAppearance="@style/inputError"
+                app:helperTextTextColor="@color/colaba_red_color"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_monthly_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="1234567890"
+                    android:ems="10"
+                    android:fontFamily="@font/rubik_regular"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingStart="0dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="@dimen/ed_txt_size_primary_info" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/layout_monthly_withdrawal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/rubik_light"
+                android:hint="@string/monthly_withdrawal"
+                android:textColorHint="@color/primary_info_label_color"
+                app:boxCollapsedPaddingTop="1dp"
+                app:boxStrokeColor="@color/primary_info_line_color"
+                app:boxStrokeWidth="0.5dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:helperTextEnabled="true"
+                app:helperTextTextAppearance="@style/inputError"
+                app:helperTextTextColor="@color/colaba_red_color"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_monthly_withdrawl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="1234567890"
+                    android:ems="10"
+                    android:fontFamily="@font/rubik_regular"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingStart="0dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="@dimen/ed_txt_size_primary_info" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_save_change"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="end"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/loader_retirement_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:elevation="1dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colaba_apptheme_blue"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

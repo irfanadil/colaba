@@ -1,0 +1,1898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/half_white"
+    >
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/horizontal_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            >
+
+
+            <!--
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/btn_undisclosed_borrowed"
+                           android:layout_width="wrap_content"
+                           android:layout_height="30dp"
+                           android:paddingStart="12dp"
+                           android:paddingEnd="12dp"
+                           android:layout_marginStart="18dp"
+                           android:text="Undisclosed Borrowed Funds"
+                           android:textSize="13sp"
+                           android:fontFamily="@font/rubik_regular"
+                           android:textAllCaps="false"
+                           android:clickable="true"
+                           android:gravity="center"
+                           android:background="@drawable/blue_white_style_filter"
+                           android:textColor="@color/doc_filter_text_color_selector">
+                       </androidx.appcompat.widget.AppCompatTextView>
+
+
+
+                     <androidx.appcompat.widget.AppCompatTextView
+
+                         android:id="@+id/btn_ownership_interest"
+                         android:layout_width="wrap_content"
+                         android:layout_height="30dp"
+                         android:paddingStart="12dp"
+                         android:paddingEnd="12dp"
+                         android:layout_marginStart="8dp"
+                         android:text="Ownership Interest in Property"
+                         android:textSize="13sp"
+                         android:fontFamily="@font/rubik_regular"
+                         android:textAllCaps="false"
+                         android:gravity="start|center"
+
+                         android:drawableTint="@color/filter_blue"
+                         android:background="@drawable/blue_white_style_filter"
+                         android:textColor="@color/doc_filter_text_color_selector"
+                         />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_priority_liens"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:gravity="center"
+                                     android:text="Priority Liens"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_undisclosed_mortgage"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Undisclosed Mortgage Applications"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_undisclosed_credit"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Undisclosed Credit Application"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:tag="Debt Co-signer or Guarantor"
+                                     android:id="@+id/btn_debt"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Debt Co-signer or Guarantor"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+                                     android:singleLine="true"
+                                     android:lines="1"
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+                                     android:id="@+id/btn_outstanding"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Outstanding Judgements"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_federal_debt"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Federal Debt Deliquency"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+                                     android:id="@+id/btn_party_to"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Party to Lawsuit"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_title_conveyance"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Title Conveyance"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_pre_foreclouser"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Pre-Foreclosure or Short Sale"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_foreclosured_property"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Foreclosured Property"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_bankruptcy"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Bankruptcy"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_child_support"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Child Support, Alimony, etc."
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+
+                                     android:id="@+id/btn_demographic_info"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="30dp"
+                                     android:paddingStart="12dp"
+                                     android:paddingEnd="12dp"
+                                     android:layout_marginStart="8dp"
+                                     android:text="Demographic Information"
+                                     android:textSize="13sp"
+                                     android:fontFamily="@font/rubik_regular"
+                                     android:textAllCaps="false"
+                                     android:gravity="start|center"
+                                     android:layout_marginEnd="10dp"
+                                     android:background="@drawable/blue_white_style_filter"
+                                     android:textColor="@color/doc_filter_text_color_selector"
+                                     />
+
+                                 -->
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!--
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/undisclosed_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/ethnicity_children"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/undisclosed_question_one"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/undisclosed_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ethnicity_children">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/undisclosed_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/undisclosed_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/undisclosed_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/undisclosed_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="What is the amount of money you’ve borrowed or intend to borrow?"
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="$12,000"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ownership_interest_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/have_you_had_an_ownership_interest"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/ownership_interest_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/ownership_interest_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/ownership_interest_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ownership_interest_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ownership_interest_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="What type of property did you own?"
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Single Family Property"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/priority_liens_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/will_this_property_be_subject_to_a_lien"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/priority_liens_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView52">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/priority_liens_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/priority_liens_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/priority_liens_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priority_liens_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/textView54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView54"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/undisclosed_mortgage_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/undisclosed_mortgage_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/undisclosed_mortgage_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView62">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/undisclosed_mortgage_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/undisclosed_mortgage_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/undisclosed_mortgage_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/undisclosed_mortgage_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/textView68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/third_lo_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView68" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/undisclosed_credit_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/undisclosed_credit_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/undisclosed_credit_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView72">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/undisclosed_credit_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/undisclosed_credit_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/undisclosed_credit_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/undisclosed_credit_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/fourth_lo_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fourth_lo_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fourth_lo_detail" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/debt_co_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/debt_co_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/debt_co_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView82">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/debt_co_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/debt_co_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/debt_co_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/debt_co_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/textView81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/outstanding_judgement_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+
+                android:id="@+id/textView92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/outstanding_judgement_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/outstanding_judgement_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView92">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/outstanding_judgement_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/outstanding_judgement_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/outstanding_judgement_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/outstanding_judgement_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/federal_dept_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+
+                android:id="@+id/textView102"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/federal_debt_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/federal_dept_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView102">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/federal_dept_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/federal_dept_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/federal_dept_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/federal_dept_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/party_to_lawsuit_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+
+                android:id="@+id/textView112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/party_to_lawsuit_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/party_to_lawsuit_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView112">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/party_to_lawsuit_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/party_to_lawsuit_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/party_to_lawsuit_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/party_to_lawsuit_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/title_conveyance_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/title_conveyance_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/title_conveyance_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView122">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/title_conveyance_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/title_conveyance_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/title_conveyance_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_conveyance_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/grandTotalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pre_foreclosure_short_sale_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView132"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/pre_foreclosure_or_short_sale_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/pre_foreclosure_short_sale_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView132">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/pre_foreclosure_short_sale_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/pre_foreclosure_short_sale_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pre_foreclosure_short_sale_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pre_foreclosure_short_sale_radio_group">
+
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/foreclosured_property_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView142"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/foreclosured_property_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/foreclosured_property_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView142">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/foreclosured_property_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/foreclosured_property_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/foreclosured_property_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foreclosured_property_radio_group">
+
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Details"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:text="Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum..."
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bankruptcy_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView152"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/bankruptcy_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/bankruptcy_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView152">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/bankruptcy_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/bankruptcy_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bankruptcy_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="21dp"
+                android:visibility="gone"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bankruptcy_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Which type?"
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Chapter 7"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView63" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/child_support_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView172"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/child_support_question"
+                android:textColor="@color/grey_color_two"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/child_support_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/half_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView172">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/child_support_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/yes"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/child_support_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:clickable="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/txt_color_app_headings"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/child_support_detail_box"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:paddingStart="30dp"
+                android:paddingTop="21dp"
+                android:paddingEnd="21dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/child_support_radio_group"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/textView77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Child Support"
+                    android:textColor="@color/grey_color_two"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView78"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="$1,500"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView77" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <!--</ScrollView>-->
+
+
+    <ImageView
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_save"
+        app:elevation="3dp"
+        android:translationX="18dp"
+        android:translationY="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

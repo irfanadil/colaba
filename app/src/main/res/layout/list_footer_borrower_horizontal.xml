@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addBorrowerLayout"
+    android:layout_width="190dp"
+    android:layout_height="90dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="10dp"
+    android:background="@drawable/content_background_light">
+
+    <TextView
+        android:id="@+id/addMoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Add Borrower"
+        android:textSize="12sp"
+        android:fontFamily="@font/rubik_regular"
+        android:textColor="@color/colaba_apptheme_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/addMoreImageView"
+        app:layout_constraintStart_toEndOf="@+id/addMoreImageView"
+        app:layout_constraintTop_toTopOf="@+id/addMoreImageView" />
+
+    <ImageView
+        android:id="@+id/addMoreImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_plus_inside_circle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

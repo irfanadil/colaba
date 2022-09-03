@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/co_borrower_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Maria Rendall"
+        android:textAlignment="center"
+        android:textColor="@color/grey_color_four"
+        android:textSize="13sp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_occupying"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:button="@drawable/radiodraw"
+            android:clickable="true"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="15dp"
+            android:text="@string/occupying"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_non_occupying"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginTop="18dp"
+            android:button="@drawable/radiodraw"
+            android:clickable="true"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="15dp"
+            android:text="@string/non_occupying"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+</LinearLayout>

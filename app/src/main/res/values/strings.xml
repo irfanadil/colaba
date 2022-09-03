@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_loan_stage">
+        <item>Pre-Approval</item>
+    </string-array>
+
+    <string name="app_name">Colaba</string>
+
+    <string name="api_key">AIzaSyBzPEiQOTReBzy6W1UcIyHApPu7_5Die6w </string>
+
+    <string name="colaba">Colaba</string>
+    <string name="email">Email</string>
+    <string name="call">Call</string>
+    <string name="text">Text</string>
+    <string name="wrong_credential">Wrong Credential</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="mobile_verification_code">Mobile Verification Code</string>
+    <string name="password">Password</string>
+    <string name="face_id">Face ID Login</string>
+    <string name="biometric_login">Biometric Login</string>
+    <string name="login">LOGIN</string>
+    <string name="logout">Logout</string>
+    <string name="verify">VERIFY</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="continue_to">Continue</string>
+    <string name="skip_this_step">Skip this step</string>
+    <string name="one_minute_ago">1 minute ago</string>
+    <string name="login_with_another_account">Login with another account</string>
+    <string name="sign_in_with_password">Sign in with Password</string>
+
+    <string name="send_invitation">SEND INVITATION</string>
+
+    <string-array name="array_occupancy_type">
+        <item>Primary Residence</item>
+        <item>Second Home</item>
+        <item>Investment Property</item>
+    </string-array>
+
+    <string-array name="array_property_type">
+        <item>Single Family Property</item>
+        <item>Condominium</item>
+        <item>Townhouse</item>
+        <item>Cooperative</item>
+        <item>Manufactured Home</item>
+        <item>Duplex (2 Unit)</item>
+        <item>Triplex (3 Unit)</item>
+        <item>Quadplex (4 Unit)</item>
+    </string-array>
+
+    <string-array name="array_property_status">
+        <item>Retained</item>
+        <item>Pending Sale</item>
+    </string-array>
+
+
+    <!--  <item>Own</item>
+        <item>Rent</item>
+        <item>No Primary Housing Expense</item>-->
+
+
+    <string name="race">Race</string>
+    <string name="ethnicity">Ethnicity</string>
+    <string name="sex">Sex</string>
+
+
+    <string name="add_current_address">Add Current Residence</string>
+    <string name="add_previous_address">Add Previous Residence</string>
+    <string name="mailing_address_added">Mailing address has been added</string>
+
+    <string name="doc_filter_all">All</string>
+    <string name="doc_filter_in_draft">In Draft</string>
+    <string name="doc_filter_borrower_to_do">Borrower To Do</string>
+    <string name="doc_filter_pending">Pending</string>
+    <string name="doc_filter_completed">Completed</string>
+    <string name="doc_filter_started">Started</string>
+    <string name="doc_filter_manually_added">Manually Added</string>
+
+    <string name="no_doc_uploaded">No documents uploaded yet</string>
+    <string name="no_doc_found">No documents found</string>
+
+    <string name="delete_prev_address">Are you sure you want to delete Richard\'s Previous Address?</string>
+    <string name="delete_current_address">Are you sure you want to delete Richard\'s Current Address?</string>
+
+    <string name="docs_top_cell">docs_top_cell</string>
+    <string name="docs_search_cell">docs_search_cell</string>
+
+    <string name="asset_top_cell">asset_top_cell</string>
+
+    <string name="asset_middle_cell">asset_middle_cell</string>
+    <string name="asset_bottom_cell">asset_bottom_cell</string>
+
+    <string name="plus_three">+3</string>
+    <string name="actions_pending">Most Actions Pending</string>
+    <string name="recent_activity">Most Recent Activity (Default)</string>
+    <string name="save_continue">Save &amp; Continue</string>
+
+    <string name="primary_borrower_info">Primary Borrower Info</string>
+
+    <string name="borrower_a_to_z">Primary Borrower Last Name (A to Z)</string>
+    <string name="borrower_z_to_a">Primary Borrower Last Name (Z to A)</string>
+
+    <string name="application">Application</string>
+    <string name="documents">Documents</string>
+    <string name="documents_small">documents</string>
+    <string name="conversation">Conversations</string>
+    <string name="archive">Archive</string>
+    <string name="assets_income"> ASSETS &amp; INCOME</string>
+    <string name="income">Income</string>
+    <string name="real_estate_owned">Real Estate Owned</string>
+    <string name="add_real_estate_owned">Add Real Estate Owned</string>
+    <string name="add_subject_property">Add Subject Property</string>
+
+
+    <string name="pipeline">Pipeline</string>
+    <string name="assigned_to_me">Assigned to Me</string>
+    <string name="assign_application_to">Assign Application To</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">Login credentials not verified</string>
+    <string name="email_format_error">Invalid Email, Please try again…</string>
+    <string name="email_empty_error"> Empty Email, Please try again…</string>
+    <string name="bottom_email_error">This email and/or phone number is already associated with a contact.</string>
+
+    <string name="password_empty_error">Password Empty, Please try again…</string>
+    <string name="password_error">Invalid Password, Please try again…</string>
+    <string name="password_length_error">Invalid Password, Length too short…</string>
+    <string name="place_order">Place Order</string>
+    <string name="test_id">test1</string>
+    <string name="empty"> </string>
+
+    <string name="send_the_borrower">Send the borrower a pre-approval letter, allowing them to place an offer on their dream home.</string>
+    <string name="ipsum_dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate eros odio, elementum ultrices magna ornare eu.</string>
+    <string name="in_what_state">In what state was this relationship formed?</string>
+
+    <string name="was_richard">Was he ever activated during their tour of duty?</string>
+    <string name="last_date_of_service">Last date of service / tour</string>
+
+    <string name="set_letter_ondemand">Set Letter On-Demand</string>
+    <string name="letter_on_demand_text">Allow borrowers to generate their own pre-approval letters after setting loan limits below</string>
+    <string name="max_loan_amount">Max Loan Amount</string>
+    <string name="max_down_payment">Max Down Payment</string>
+    <string name="max_expiry_date">Max Expiration Date (MM/DD/YYYY)</string>
+    <string name="max_purchase_price">Max Purchase Price</string>
+
+    <string name="test_password">123</string>
+    <string name="test_cell">test_cell</string>
+
+    <string name="good_morning"> Good Morning </string>
+    <string name="dashboard"> DashBoard Screen </string>
+    <string name="user_name"> Jonny Leo </string>
+    <string name="dummy_phone_num">(458) 458-8789</string>
+    <string name="dummy_email">jsmith@example.com</string>
+    <string name="dummy_minute">08</string>
+    <string name="dummy_seconds">:  30</string>
+
+    <string name="good_evening_james">James</string>
+    <string name="current_residence">Current Residence</string>
+    <string name="previous_residence">Previous Residence</string>
+    <string name="mailing_address">Mailing Address</string>
+
+
+    <string name="purchase">Purchase</string>
+    <string name="user_data_does_not_exit">Invalid email or password</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+
+    <string name="min">min</string>
+    <string name="sec">sec</string>
+    <string name="forgot_password">Forgot your password?  </string>
+    <string name="login_to_lender_portal">Login To Lender\’s Portal </string>
+    <string name="did_not_receive_code">Didn\'t receive the code? </string>
+    <string name="resend_code">Resend code </string>
+
+    <string name="max_resend_attempts_reached">Max resend attempts reached. Please try again after some time</string>
+
+    <string name="dummy_ok_message">You need to complete the timeout. and then move on to the next screen which is dashboard</string>
+
+
+    <string name="dummy_otp_message">You need to complete the timeout.</string>
+
+    <string name="biometric_check">Device is not registered with Biometric login. Please setup it from settings.</string>
+
+    <string name="biometric_check_two">Please setup Biometric from settings.</string>
+
+    <string name="authenticate_with_biometric">Authenticate with Biometric</string>
+    <string name="user_your_biometric">Use your biometric to login to Colaba Mobile</string>
+
+    <string name="do_not_ask_again"> Don\'t ask again on this device. </string>
+    <string name="password_assistance">Password Assistance </string>
+    <string name="enter_your_email">Enter your email to reset your password. </string>
+    <string name="almost_finished"> Almost Finished </string>
+    <string name="go_back_to_login">GO BACK TO LOGIN</string>
+    <string name="we_have_send_you_email">We\'ve sent you an email with instructions <br /> to create a new password </string>
+    <string name="phone_number_verification">Phone Number Verification </string>
+    <string name="enter_the_code_sent_to">Enter the code sent to (***) ***-7787 </string>
+    <string name="enter_your_phone_number">Enter your phone number below and we\'ll \n send you a verification code. </string>
+
+    <string name="webservice_error">Webservice Error </string>
+
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="pdf_view">Pdf View</string>
+    <string name="image_view">Image View</string>
+    <string name="loan_info_purchase">Purchase Loan Information</string>
+    <string name="loan_info_refinance">Refinance Loan Information</string>
+
+    <string name="married_to_coborower">Are you married to a co-borrower?</string>
+    <string name="coborower_legal_spouse">Is Co-borrower your legal Spouse?</string>
+
+    <string name="request_docs">Request Document</string>
+
+
+    <string name="assets">Assets</string>
+
+    <string name="street_address">Street Address</string>
+    <string name="unit_or_apt">Unit Or Apt. Number (Optional)</string>
+    <string name="city">City</string>
+    <string name="relationship_details"> Relationship Details</string>
+    <string name="county">County</string>
+    <string name="state">State</string>
+    <string name="type_of_relations">Types of Relationship</string>
+    <string name="search_mailing_address">Search Mailing Address</string>
+    <string name="search_home_address">Search Home Address</string>
+    <string name="search_prev_home_address">Search Previous Home Address</string>
+    <string name="search_main_address">Search Main Address</string>
+    <string name="search_business_address">Search Business Address</string>
+    <string name="search_service_location_address">Search Service Location Address</string>
+
+    <string name="zip_code">Zip Code</string>
+    <string name="country">Country</string>
+    <string name="temp_address">4101  Oak Tree Avenue  LN # 222,\nChicago, MD 60605</string>
+
+
+    <string name="housing_status">Housing Status</string>
+    <string name="monthly_rent">Monthly Rent ($)</string>
+    <string name="move_in_date">Move in Date</string>
+    <string name="move_out_date">Move out Date</string>
+    <string name="save_changes">SAVE CHANGES</string>
+
+
+    <string name="richard">Richard Glenn Randall</string>
+    <string name="refinance">Refinance</string>
+    <string name="application_started">Application Started</string>
+    <string name="docs_to_review">7 Document to Review</string>
+    <string name="time_ago"> 1 min ago</string>
+
+
+    <!--       dummy data   -->
+
+    <string name="programmatic_place_predictions_instructions">This activity demonstrates as-you-type programmatic place predictions. Tap on the search icon on the toolbar and search for a place.</string>
+    <string name="search">Search</string>
+    <string name="search_a_place">Search a Place</string>
+    <string name="choose_email_client">Choose Email Client...</string>
+
+    <string name="places_demo_title">Places Search Demo</string>
+    <string name="places_demo_description">Demonstrates usages of Places KTX coroutines and DSL builder features.</string>
+
+    <string name="autocomplete_fragment_demo_title">Autocomplete Fragment Demo</string>
+    <string name="autocomplete_fragment_demo_description">Demonstrates using AutocompleteSupportFragment and placeSelectionEvents() to use Kotlin Flow.</string>
+
+    <string name="title_rugby">Rugby</string>
+    <string name="title_cricket">Cricket</string>
+    <string name="title_basketball">Basketball</string>
+    <string name="title_hockey">Hockey</string>
+    <string name="title_volleyball">Volleyball</string>
+    <string name="title_esports">Esports</string>
+    <string name="title_kabbadi">Kabaddi</string>
+    <string name="title_baseball">Baseball</string>
+    <string name="title_mma">MMA</string>
+    <string name="title_soccer">Soccer</string>
+    <string name="title_handball">Handball</string>
+    <string name="title_tennis">Tennis</string>
+    <string name="has_submitted">has submitted</string>
+
+    <string name="subtitle_rugby">19th century</string>
+    <string name="subtitle_cricket">16th century</string>
+    <string name="subtitle_basketball">December 21, 1891</string>
+    <string name="subtitle_hockey">19th century</string>
+    <string name="subtitle_volleyball">1895</string>
+    <string name="subtitle_esports">1972</string>
+    <string name="subtitle_kabbadi">1921</string>
+    <string name="subtitle_baseball">1869</string>
+    <string name="subtitle_mma">1993</string>
+    <string name="subtitle_soccer">1863</string>
+    <string name="subtitle_handball">2 December 1917</string>
+    <string name="subtitle_tennis">1859</string>
+
+    <string name="submitted_docs">Richard Glenn has submitted \n documents</string>
+
+
+    <string name="heading_title">Yesterday</string>
+
+    <string name="search_results">Search results</string>
+    <string name="results_found">6 results found</string>
+
+
+    <string name="application_submitted">Application Completed</string>
+    <string name="micheal_blakeley">Michael Blakeley</string>
+    <string name="micheal_blakeley_address">727 Ashleigh LN # 222 <br />  Dallas, TX 76099</string>
+    <string name="micheal_blakeley_file_number">9202909209</string>
+
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
+    <string name="notifications">Notifications</string>
+
+    <string name="fifteen_thirty_four">15:34</string>
+
+    <string name="see_new_notifications">See New Notifications</string>
+
+    <string name="online_right_now">Online</string>
+    <string name="last_seen_now">last seen just now</string>
+    <string name="last_seen_min">last seen 1 minute ago</string>
+    <string name="last_seen_mins">last seen %d minutes ago</string>
+    <string name="last_seen_hour">last seen 1 hour ago</string>
+    <string name="last_seen_hours">last seen %d hours ago</string>
+    <string name="last_seen_day">last seen 1 day ago</string>
+    <string name="last_seen_days">last seen %d days ago</string>
+    <string name="just_now">just now</string>
+
+    <string name="legal_spouse">Is there a person who is not your legal spouse but who currently has real property rights similar to those of a legal spouse?</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="my_cart">My Cart</string>
+    <string name="delete">DELETE</string>
+
+    <string name="internet_error">Please connect to the network…</string>
+
+    <string name="heading_borrower_primary">Primary Borrower</string>
+    <string name="heading_borrower_secondary">Co-Borrower</string>
+
+    <string name="expected_date_of_transfer">Expected Date of Transfer</string>
+    <string name="date_of_transfer">Date of Transfer</string>
+    <string name="details">Details</string>
+
+
+    <!-- primary info labels-->
+    <string name="legal_first_name">Legal First Name</string>
+    <string name="first_name">First Name</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="legal_last_name">Legal Last Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="suffix">Suffix</string>
+    <string name="email_add">Email Address</string>
+    <string name="home_number">Home Number</string>
+    <string name="work_number">Work Number</string>
+    <string name="ext_number">EXT</string>
+    <string name="cell_number">Cell Number</string>
+    <string name="emp_phone_number">Employer Phone Number</string>
+    <string name="current_home_address">Current Home Address</string>
+    <string name="martial_status">Marital Status</string>
+    <string name="martial_status_married">Married</string>
+    <string name="martial_status_unmarried">Unmarried</string>
+    <string name="martial_status_separated">Separated</string>
+    <string name="unmarried_addendum">Unmarried Addendum</string>
+    <string name="unmarried_addendum_ques">Is there a person who is not your legal spouse but who currently has real property rights similar to...</string>
+    <string name="citizenship">Citizenship</string>
+    <string name="us_citizen">US Citizen</string>
+    <string name="pr_green_card">Permanent Resident Alien (Green Card)</string>
+    <string name="non_pr">Non Permanent Resident Alien</string>
+    <string name="visa_status">Visa Status</string>
+    <string name="status_details">Status Details</string>
+    <string name="current_market_value">Current Market Value</string>
+    <string name="annual_base_salary">Annual Base Salary</string>
+    <string name="account_number">Account Number</string>
+    <string name="financial_institution">Financial Institution</string>
+    <string name="account_type">Account Type</string>
+    <string name="asset_type">Asset Type</string>
+    <string name="proceeds_from_transaction">Proceeds From Transaction</string>
+    <string name="save_current_residence">Save Current Residence?</string>
+    <string name="save_previous_residence">Save Previous Residence?</string>
+
+    <string name="dummy_string_text">Lorem ipsum dolor sit amet, consectetur elit. Quisque, elementum ...</string>
+
+    <string name="others">Others</string>
+    <string name="dob">Date of Birth</string>
+    <string name="social_security_num">Social Security Number</string>
+    <string name="no_of_dependents">No. of Dependents</string>
+    <string name="add_dependents">Add Dependent</string>
+    <string name="military_service">Military Service</string>
+    <string name="service_lastdate">Last date of service / tour</string>
+    <string name="active_duty_personel">Active Duty Personnel</string>
+    <string name="national_guard">Reserve Or National Guard</string>
+    <string name="veteran">Veteran</string>
+    <string name="surviving_spouse">Surviving Spouse</string>
+    <string name="error_field_required">This field is required.</string>
+    <string name="invalid_email">Please enter a valid email address.</string>
+    <string name="invalid_phone_num">Your phone number is not valid. Please try again.</string>
+    <string name="previous_address">Add Previous Address</string>
+    <string name="current_address">Add Current Address</string>
+    <string name="property_address">Property Address</string>
+    <string name="loan_stage">Loan Stage</string>
+    <string name="purchase_price">Purchase Price</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="down_payment">Down Payment</string>
+    <string name="estimated_closing_date">Estimated Closing Date</string>
+    <string name="cash_out_amount">Additional Cash Out Amount</string>
+    <string name="invalid_purchase_price">Purchase price should be between $50,000 and $100,000,000</string>
+    <string name="first_mortgage_ques">Which of these accounts are included in payment?</string>
+    <string name="first_mortgage_ques2">Will this mortgage be paid off at or before closing?</string>
+    <string name="sub_property_refinance_ques1">Do you currently have mortgages against this property?</string>
+    <string name="sub_property_refinance_ques2">Do you have any second mortgages on this property?</string>
+
+    <string name="bankruptcy">Bankruptcy</string>
+    <string name="demo_graphic_info">DemoGraphic Information</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="mixed_use_property_ques">If Borrower will occupy the property, will Borrower set aside space within the property to operate his/her own business?</string>
+    <string name="appraised_property_value">Apprasied Property Value</string>
+    <string name="annual_property_taxes">Annual Property Taxes</string>
+    <string name="homeowner_insurances">Annual Homeowner"\'\s Insurance</string>
+    <string name="annual_flood_insurance">Annual Flood Insurance</string>
+    <string name="is_mailing_address_different">Mailing Address is different from Current Address</string>
+    <string name="occupancy_status">Co-Borrower Occupancy Status</string>
+    <string name="occupying">Occupying</string>
+    <string name="non_occupying">Non-Occupying</string>
+    <string name="subject_property">Subject Property</string>
+    <string name="subject_property_tbd">Subject Property TBD</string>
+    <string name="subject_property_address">Subject Property Address</string>
+    <string name="mixed_use_property">Mixed Use Property</string>
+    <string name="first_mortgage">First Mortgage</string>
+    <string name="sec_mortgage">Second Mortgage</string>
+    <string name="first_mortgage_payment">First Mortgage Payment</string>
+    <string name="sec_mortgage_payment">Second Mortgage Payment</string>
+    <string name="credit_limit_switch">Home Equity Line of Credit (HELOC)</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="details_heading">Details</string>
+    <string name="total_income">Total Income</string>
+    <string name="current_employment">Current Employment</string>
+    <string name="previous_employment">Previous Employment</string>
+    <string name="self_employment_contractor">Self Employment / Ind. Contractor</string>
+    <string name="add_employment">Current Employment</string>
+    <string name="add_prev_employment">Previous Employment</string>
+    <string name="employer_name">Employer Name</string>
+    <string name="employer_address">Employer Address</string>
+    <string name="job_title">Job Title</string>
+    <string name="start_date">Start Date (MM/DD/YYYY)</string>
+    <string name="end_date">End Date (MM/DD/YYYY)</string>
+    <string name="years_profession">Years in Profession</string>
+    <string name="income_ques1">Are you employed by a family member, property seller, real estate agent, or other party to the transaction?</string>
+    <string name="income_ques2">Do you have an ownership interest in this business?</string>
+    <string name="priority_liens">Priority liens</string>
+    <string name="undisclosed_fund">undisclosed_fund</string>
+    <string name="ownership_percentage">Ownership Percentage</string>
+    <string name="pay_type">Pay Type</string>
+    <string name="additional_income">Additional Income</string>
+    <string name="salary">Salary</string>
+    <string name="hourly">Hourly</string>
+    <string name="bonus">Bonus</string>
+    <string name="overtime">Overtime</string>
+    <string name="commission">Commission</string>
+    <string name="bonus_income">Annual Bonus Income</string>
+    <string name="overtime_income">Annual Overtime Income</string>
+    <string name="commission_income">Annual Commission Income</string>
+    <string name="net_annual_income">Net Annual Income</string>
+    <string name="business_name">Business Name</string>
+    <string name="business_phnum">Business Phone Number</string>
+    <string name="business_start_date">Business Start Date (MM/DD/YYYY)</string>
+    <string name="business">Business</string>
+    <string name="military_pay">Military Pay</string>
+    <string name="retirement">Retirement</string>
+    <string name="income_other">Other</string>
+    <string name="income_retirement_type">Retirement Income Type</string>
+    <string name="military_entitlements">Military Entitlements</string>
+    <string name="service_location_add">Service Location Address</string>
+    <string name="business_main_address">Business Main Address</string>
+    <string name="monthly_withdrawal">Monthly Withdrawal</string>
+    <string name="annual_income">Annual Income</string>
+    <string name="other_income_type">Income Type</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="monthly_base_salary">Monthly Base Salary</string>
+    <string name="current_rental_income">Current Rental Income</string>
+    <string name="property_status">Property Status</string>
+    <string name="property_value">Property Value</string>
+    <string name="property_type">Property Type</string>
+    <string name="occupancy_type">Occupancy Type</string>
+    <string name="rental_income">Rental Income</string>
+    <string name="homeowner_assocaition_dues">Annual Homeowner"\'\s Association Dues</string>
+    <string name="txt_delete_property">Are you sure you want to delete this property?</string>
+    <string name="start_new_application">Start New Application</string>
+    <string name="create_application">Create Application</string>
+    <string name="create_new_contact">Create New Contact</string>
+    <string name="find_contact">Find a Contact</string>
+    <string name="search_contact">Search by Name, Email, or Phone Number</string>
+    <string name="loan_purpose">Loan Purpose</string>
+    <string name="loan_goal">Loan Goal</string>
+    <string name="lower_payments_term">Lower Payments or Term</string>
+    <string name="cash_out">Cash-Out</string>
+    <string name="debt_consolidated">Debt Consolidation</string>
+    <string name="mortgage_balance">Mortgage Balance</string>
+    <string name="mortgage_payment">Mortgage Payment</string>
+    <string name="credit_limit">Credit Limit</string>
+    <string name="unpaid_first_mortgage_bal">Unpaid First Mortgage Balance</string>
+    <string name="unpaid_sec_mortgage_bal">Unpaid Second Mortgage Balance</string>
+    <string name="sub_property_sec_mortgage_ques1">Will this mortgage be combined with the new first mortgage?</string>
+    <string name="sub_property_sec_mortgage_ques2">Was this mortgage taken when the property was purchased?</string>
+
+    <string name="child_support_question">Are you currently obligated to pay child support, alimony or separate maintenance?</string>
+    <string name="undisclosed_mortgage_question">Have you or will you be applying for a mortgage loan on another property (not the property securing this loan) on or before closing this transaction that is not disclosed on this loan application?</string>
+    <string name="undisclosed_credit_question">Have you or will you be applying for any new credit (e.g., instalment loan, credit card, etc.) on or before closing this loan that is not disclosed on this application?</string>
+    <string name="debt_co_question">Are you a co-signer or guarantor on any debt or loan that is not disclosed on this application?</string>
+    <string name="outstanding_judgement_question">Are there any outstanding judgments against you?</string>
+    <string name="federal_debt_question">Are you currently delinquent or in default on a Federal debt?</string>
+    <string name="party_to_lawsuit_question">Are you a party to a lawsuit in which you potentially have any personal financial liability?</string>
+    <string name="title_conveyance_question">Have you conveyed title to any property in lieu of foreclosure in the past 7 years?</string>
+    <string name="pre_foreclosure_or_short_sale_question">Within the past 7 years, have you completed a pre-foreclosure sale or short sale, whereby the property was sold to a third party and the Lender agreed to accept less than the outstanding mortgage balance due?</string>
+    <string name="foreclosured_property_question">Have you had property foreclosed upon in the last 7 years?</string>
+    <string name="bankruptcy_question">Have you declared bankruptcy within the past 7 years?</string>
+    <string name="govt_questions">Government Questions</string>
+    <string name="undisclosed_question_one">Are you borrowing any money for this real estate transaction (e.g., money for your closing costs or down payment) obtaining any money from another party, such as the seller or realtor, that you have not disclosed on this loan application?</string>
+    <string name="have_you_had_an_ownership_interest">Have you had an ownership interest in another property in the last three years?</string>
+    <string name="will_this_property_be_subject_to_a_lien">Will this property be subject to a lien that could take priority over the first mortgage lien, such as a clean energy lien paid through your property taxes (e.g., the Property Assessed Clean Energy Program)?</string>
+
+    <string name="assign_loan_officer">Assign Loan Officer</string>
+
+    <string name="add_employer_add">Add Employer Address</string>
+    <string name="add_business_add">Add Business Address</string>
+    <string name="add_service_add">Add Service Location Address</string>
+    <string name="add_property_add">Add Property Address</string>
+    <string name="current_employer_address">Current Employer Address</string>
+    <string name="previous_employer_address">Previous Employer Address</string>
+
+    <string name="msg_to_borrower">Include a message to the borrower</string>
+    <string name="custom_document">Custom Document</string>
+    <string name="custom_doc_name">Custom Document Name</string>
+    <string name="standard_checklist">My Standard Checklist</string>
+    <string name="request_email_template">Request Email Template</string>
+    <string name="send_doc_request">Send Document Request</string>
+    <string name="doc_request_sent">Document Request Sent</string>
+    <string name="doc_req_has_been_sent_to">Document Request has been sent to</string>
+    <string name="send_request">Send Request</string>
+    <string name="request_doc">REQUEST DOCUMENT</string>
+    <string name="back_to_doc">Back to Documents</string>
+    <string name="ques_remove_doc">Are you sure you want to remove this document?</string>
+    <string name="email_to">To</string>
+    <string name="email_cc">CC</string>
+    <string name="subject_line">Subject Line</string>
+   <string name="email_body">Hi Richard,\n \nAs we discussed, I’m adding addition To continue your application, we need some more information. \n \nTax Returns with schedules (Personals - Two Years) \nCredit Report \nEarnest Money Deposit \nFinancial Statement \nForm 1099 \nGovernment-issued ID \nLetter of Explanation - General \nMortgage Statement \nPaystubs
+        \nComplete these items as soon as possible so we can continue reviewing your application. \n \n \n \nThanks &amp; Regards, \n John Doe
+    </string>
+
+    <string name="invitation_detail">
+        Hi Richard,\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo laoreet lectus sit amet vulputate. Ut malesuada arcu eget porttitor laoreet. In commodo dui et tristique consequat. Aliquam cursus mi nec lectus pretium, quis tincidunt erat consequat. Mauris blandit velit non velit laoreet efficitur. Integer non arcu sodales, rutrum lectus ac, auctor lectus.
+        Integer in hendrerit arcu, at pellentesque ligula.\n \n https://colaba.com/?=sdjkhdfgn_dsfgdf \n \nIn commodo dui et tristique consequat.
+        Aliquam cursus mi nec lectus pretium, quis tincidunt erat consequat.\n \n \n \nThanks &amp; Regards,\nJohn Doe\nLoan Officer
+    </string>
+
+</resources>

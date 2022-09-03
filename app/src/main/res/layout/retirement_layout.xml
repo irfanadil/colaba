@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/assets_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:padding="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/tab_top_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_grey_cross" />
+
+        <TextView
+            android:id="@+id/borrower_name_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Retirement Account"
+            android:textColor="@color/grey_color_one"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/borrower_purpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/rubik_light"
+            android:text="@string/richard"
+            android:textAllCaps="true"
+            android:textColor="@color/grey_color_three"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/borrower_name_greeting" />
+
+        <View
+            android:id="@+id/tab_top_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colaba_app_border_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/top_del_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:srcCompat="@drawable/ic_grey_del" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/financialLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="22dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/rubik_light"
+        android:hint="@string/financial_institution"
+        android:textColorHint="@color/primary_info_label_color"
+        app:boxCollapsedPaddingTop="1dp"
+        app:boxStrokeColor="@color/primary_info_line_color"
+        app:boxStrokeWidth="0.5dp"
+        app:boxStrokeWidthFocused="1dp"
+
+
+        app:helperTextEnabled="true"
+        app:helperTextTextAppearance="@style/inputError"
+        app:helperTextTextColor="@color/colaba_red_color"
+
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+        app:hintTextColor="@color/grey_color_two"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assets_top_container"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/financial_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:cursorVisible="true"
+
+            android:ems="10"
+            android:fontFamily="@font/rubik_regular"
+
+            android:inputType="text"
+            android:paddingStart="0dp"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+
+
+
+            android:lines="1"
+
+            android:scrollHorizontally="false"
+            android:maxLines="10"
+            android:gravity="top|start"
+
+
+            android:textColor="@color/grey_color_one"
+
+            android:textSize="@dimen/ed_txt_size_primary_info" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/account_number_layout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="22dp"
+
+
+
+
+
+
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/rubik_light"
+        android:hint="@string/account_number"
+        android:textColorHint="@color/primary_info_label_color"
+        app:boxCollapsedPaddingTop="1dp"
+        app:boxStrokeColor="@color/primary_info_line_color"
+        app:boxStrokeWidth="0.5dp"
+        app:boxStrokeWidthFocused="1dp"
+
+
+        app:endIconDrawable="@drawable/ic_eye_hide"
+        app:endIconMode="custom"
+        app:endIconTint="@color/grey_color_three"
+        app:passwordToggleEnabled="true"
+
+        app:helperTextEnabled="true"
+        app:helperTextTextAppearance="@style/inputError"
+        app:helperTextTextColor="@color/colaba_red_color"
+
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+        app:hintTextColor="@color/grey_color_two"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/financialLayout"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/account_number_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:cursorVisible="true"
+
+
+            android:ems="10"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="0dp"
+
+
+            android:imeOptions="actionNext"
+
+            android:inputType="numberPassword"
+            android:singleLine="true"
+            android:lines="10"
+            android:minLines="1"
+            android:scrollHorizontally="false"
+            android:maxLines="1"
+
+
+
+
+            android:textColor="@color/grey_color_one"
+
+            android:textSize="@dimen/ed_txt_size_primary_info" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/annual_base_layout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="22dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/rubik_light"
+        android:hint="@string/annual_base_salary"
+        android:textColorHint="@color/primary_info_label_color"
+        app:boxCollapsedPaddingTop="1dp"
+        app:boxStrokeColor="@color/primary_info_line_color"
+        app:boxStrokeWidth="0.5dp"
+        app:boxStrokeWidthFocused="1dp"
+
+
+        app:helperTextEnabled="true"
+        app:helperTextTextAppearance="@style/inputError"
+        app:helperTextTextColor="@color/colaba_red_color"
+
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+        app:hintTextColor="@color/grey_color_two"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_number_layout"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/annual_base_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:cursorVisible="true"
+
+            android:ems="10"
+            android:fontFamily="@font/rubik_regular"
+
+            android:gravity="top|start"
+
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+
+            android:lines="10"
+
+            android:maxLines="10"
+            android:minLines="1"
+            android:paddingStart="0dp"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+
+
+            android:textColor="@color/grey_color_one"
+
+            android:textSize="@dimen/ed_txt_size_primary_info" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_save"
+        app:elevation="3dp"
+        android:translationX="18dp"
+        android:translationY="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

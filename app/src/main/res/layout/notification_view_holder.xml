@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="40dp">
+
+    <LinearLayout
+        android:id="@+id/rowBG"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right">
+
+        <RelativeLayout
+            android:id="@+id/delete_task"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_delete_notification" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowFG"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="11dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colaba_loan_background"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/circle_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/circle_green" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/activeBookIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toEndOf="@+id/circle_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/notify_image" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/nonActiveBookIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toEndOf="@+id/circle_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/disable_notification_book" />
+
+
+            <TextView
+                android:id="@+id/notification_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/title_tennis"
+                android:textStyle="bold"
+                android:textColor="@color/grey_color_one"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_medium"
+                app:layout_constraintStart_toEndOf="@+id/activeBookIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notification_submitted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/has_submitted"
+                android:textColor="@color/grey_color_two"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintStart_toEndOf="@+id/notification_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notification_docs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/documents_small"
+                android:textStyle="bold"
+                android:textColor="@color/grey_color_two"
+                android:textSize="12sp"
+                android:fontFamily="@font/rubik_medium"
+                app:layout_constraintStart_toStartOf="@+id/notification_name"
+                app:layout_constraintTop_toBottomOf="@+id/notification_name" />
+
+            <TextView
+                android:id="@+id/notification_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="13sp"
+                android:textColor="@color/colaba_line_separator"
+                android:text="@string/fifteen_thirty_four"
+                app:layout_constraintBottom_toBottomOf="@+id/notification_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/notification_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowUndo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="@color/colaba_primary_color">
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+    <!--
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:paddingBottom="40dp"
+        android:id="@+id/drag_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/view_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_row_background">
+
+            <ImageView
+                android:id="@+id/delete_icon"
+                android:layout_width="@dimen/ic_delete"
+                android:layout_height="@dimen/ic_delete"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_delete_white_24dp"
+                android:contentDescription="@string/delete" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/padd_10"
+                android:layout_toStartOf="@id/delete_icon"
+                android:text="@string/delete"
+                android:textColor="#fff"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colaba_loan_background"
+            android:visibility="visible"
+           >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/circle_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circle_green" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/activeBookIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@+id/circle_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notify_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/nonActiveBookIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@+id/circle_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/disable_notification_book" />
+
+
+        <TextView
+            android:id="@+id/notification_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="@string/title_tennis"
+            android:textStyle="bold"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik_medium"
+            app:layout_constraintStart_toEndOf="@+id/activeBookIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notification_submitted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/has_submitted"
+                android:textColor="@color/grey_color_two"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_medium"
+                app:layout_constraintStart_toEndOf="@+id/notification_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notification_docs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/documents_small"
+                android:textStyle="bold"
+                android:textColor="@color/grey_color_two"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_medium"
+                app:layout_constraintStart_toStartOf="@+id/notification_name"
+                app:layout_constraintTop_toBottomOf="@+id/notification_name" />
+
+        <TextView
+            android:id="@+id/notification_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:textSize="13sp"
+            android:textColor="@color/colaba_line_separator"
+            android:text="@string/fifteen_thirty_four"
+            app:layout_constraintBottom_toBottomOf="@+id/notification_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/notification_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout> -->
+

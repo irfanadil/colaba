@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:background="@color/half_white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/martial_status"
+        android:textAlignment="center"
+        android:textColor="@color/grey_color_two"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/rg_marital_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_unmarried"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/martial_status_unmarried"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik_regular"
+            android:button="@drawable/radiodraw"
+            android:paddingStart="15dp"
+            android:clickable="true" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_married"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="@string/martial_status_married"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            android:paddingStart="15dp"
+            android:button="@drawable/radiodraw"
+            android:layout_marginTop="18dp"
+            tools:ignore="RtlSymmetry"
+            android:clickable="true"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_separated"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/martial_status_separated"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="15dp"
+            android:layout_marginTop="18dp"
+            android:button="@drawable/radiodraw"
+            tools:ignore="RtlSymmetry"
+            android:clickable="true"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/unmarried_addendum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/content_bg_with_drop_shadow"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unmarried_addendum"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/txt_color_app_headings"
+            android:fontFamily="@font/rubik_medium"
+            android:textSize="14sp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/unmarried_addendum_ques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:fontFamily="@font/rubik_regular"
+            android:text="@string/unmarried_addendum_ques"
+            android:textColor="@color/grey_color_two"
+            android:textSize="13sp"
+            android:lineSpacingExtra="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_is_inRelationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/txt_color_app_headings"
+            android:fontFamily="@font/rubik_medium"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

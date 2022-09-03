@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_container"
+    android:layout_width="292dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:background="@drawable/content_bg_with_drop_shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/answer3_na2"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Fedrick"
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/answer2_no"
+            app:layout_constraintTop_toBottomOf="@+id/answer2_no" />
+
+        <TextView
+            android:id="@+id/questionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_regular"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Demographic Information"
+            android:textColor="@color/grey_color_one"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/race_ethnicity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_regular"
+            android:maxLines="2"
+            android:lines="2"
+            android:singleLine="true"
+            android:text="Race / Ethnicity / Gender"
+            android:textColor="@color/grey_color_two"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionTitle" />
+
+
+        <TextView
+            android:id="@+id/answer1_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/race_ethnicity"
+            app:layout_constraintTop_toBottomOf="@+id/race_ethnicity" />
+
+        <TextView
+            android:id="@+id/answer2_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/answer1_yes"
+            app:layout_constraintTop_toBottomOf="@+id/answer1_yes" />
+
+        <TextView
+            android:id="@+id/answer1_name"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=" "
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer1_yes"
+
+            app:layout_constraintStart_toEndOf="@+id/answer1_yes"
+            app:layout_constraintTop_toTopOf="@+id/answer1_yes" />
+
+        <TextView
+            android:id="@+id/answer2_name"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text=""
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer2_no"
+            app:layout_constraintStart_toEndOf="@+id/answer2_no"
+            app:layout_constraintTop_toTopOf="@+id/answer2_no" />
+
+        <TextView
+            android:id="@+id/answer3_na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/answer2_no"
+            app:layout_constraintTop_toBottomOf="@+id/answer2_no" />
+
+        <TextView
+            android:id="@+id/answer3_name"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text=""
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer3_na"
+            app:layout_constraintStart_toEndOf="@+id/answer3_na"
+            app:layout_constraintTop_toTopOf="@+id/answer3_na" />
+
+
+        <TextView
+            android:id="@+id/answer4_na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:visibility="gone"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/answer3_na"
+            app:layout_constraintTop_toBottomOf="@+id/answer3_na" />
+
+        <TextView
+            android:id="@+id/answer4_name"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text=""
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer4_na"
+            app:layout_constraintStart_toEndOf="@+id/answer4_na"
+            app:layout_constraintTop_toTopOf="@+id/answer4_na" />
+
+
+        <TextView
+            android:id="@+id/answer5_na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:visibility="gone"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/answer4_na"
+            app:layout_constraintTop_toBottomOf="@+id/answer4_na" />
+
+        <TextView
+            android:id="@+id/answer5_name"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text=" "
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer5_na"
+            app:layout_constraintStart_toEndOf="@+id/answer5_na"
+            app:layout_constraintTop_toTopOf="@+id/answer5_na" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

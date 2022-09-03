@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/assets_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tab_top_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_grey_cross" />
+
+        <TextView
+            android:id="@+id/borrower_name_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Asian"
+            android:textColor="@color/grey_color_one"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/borrower_purpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/rubik_light"
+            android:text="@string/richard"
+            android:textAllCaps="true"
+            android:textColor="@color/grey_color_three"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/borrower_name_greeting" />
+
+        <View
+            android:id="@+id/tab_top_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12sp"
+            android:background="@color/colaba_app_border_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/asian_inner_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+
+        android:layout_marginEnd="24dp"
+        android:paddingBottom="1dp"
+        android:visibility="visible"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assets_top_container">
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/asian_indian_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="14dp"
+            android:text="Asian Indian"
+
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            app:buttonCompat="@drawable/cb_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/chinese_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="14dp"
+            android:text="Chinese"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            app:buttonCompat="@drawable/cb_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/asian_indian_check_box" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/filipino_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="14dp"
+            android:text="Filipino"
+
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            app:buttonCompat="@drawable/cb_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chinese_check_box" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/japanese_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="14dp"
+            android:text="Japanese"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            app:buttonCompat="@drawable/cb_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filipino_check_box" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/korean_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="14dp"
+            android:text="Korean"
+
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            app:buttonCompat="@drawable/cb_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/japanese_check_box" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/vietnamese_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="14dp"
+            android:text="Vietnamese"
+
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            app:buttonCompat="@drawable/cb_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/korean_check_box" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/other_asian_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="14dp"
+            android:text="Other Asian"
+
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            app:buttonCompat="@drawable/cb_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vietnamese_check_box" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+
+            android:visibility="visible"
+
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/rubik_light"
+            android:hint="For example, Pakistani, Laotian, Thai, etc."
+            android:textColorHint="@color/primary_info_label_color"
+            app:boxCollapsedPaddingTop="1dp"
+
+
+            app:boxStrokeColor="@color/primary_info_line_color"
+            app:boxStrokeWidth="0.5dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/inputError"
+            app:helperTextTextColor="@color/colaba_red_color"
+            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+            app:hintTextColor="@color/grey_color_two"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/other_asian_check_box"
+            app:layout_constraintTop_toBottomOf="@+id/other_asian_check_box">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="top|start"
+                android:imeOptions="actionNone"
+                android:inputType="textMultiLine"
+                android:lines="10"
+                android:maxLines="10"
+                android:minLines="1"
+                android:paddingStart="0dp"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:textColor="@color/grey_color_one"
+                android:textSize="@dimen/ed_txt_size_primary_info" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ImageView
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_save"
+        app:elevation="3dp"
+        android:translationX="18dp"
+        android:translationY="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

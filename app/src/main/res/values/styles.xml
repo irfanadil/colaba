@@ -1,0 +1,105 @@
+<resources>
+    <!--
+  <style name="TextLabelPrimaryInfo" parent=Theme.App">
+      <item name="android:textColorHint">@color/txt_primary_info</item>
+      <item name="android:textSize">13sp</item>
+      <item name="colorAccent">@color/txt_primary_info</item>
+      <item name="colorControlNormal">@color/txt_primary_info</item>
+      <item name="colorControlActivated">@color/txt_primary_info</item>
+  </style> -->
+
+    <style name="email_chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="chipStrokeColor">@color/grey_color_five</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/grey_color_one</item>
+    </style>
+
+    <style name="MySpinnerDatePickerStyle" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:datePickerStyle">@style/MySpinnerDatePicker</item>
+        <item name="android:windowBackground">@color/white</item>     <!--calendar background-->
+        <item name="colorPrimary">@color/colaba_primary_color</item>
+        <item name="colorPrimaryDark">@color/grey_color_one</item>
+        <item name="android:textColorSecondary">@color/colaba_primary_color</item>    <!--days of the week-->
+
+
+        <!-- THESE WILL APPLY TO OTHER CALENDAR VIEW -->
+        <item name="android:colorAccent">@color/filter_green</item>                   <!-- FOR OTHER VIEW header background -->
+        <item name="android:colorControlActivated">@color/filter_blue</item> <!--selected day-->
+        <item name="android:textColorPrimary">@color/grey_color_one</item> <!--days of the month-->
+    </style>
+
+
+
+    <style name="MySpinnerDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+
+    </style>
+
+
+    <style name="TextAppearence.Unmarried.TextInputLayout"  parent="@android:style/TextAppearance">
+        <!--<item name="android:textColorHint">@color/colaba_red_color</item>-->
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:font">@font/rubik_regular</item>
+    </style>
+
+
+    <style name="TextAppearence.App.TextInputLayout"  parent="@android:style/TextAppearance">
+        <!--<item name="android:textColorHint">@color/colaba_red_color</item>-->
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:font">@font/rubik_regular</item>
+    </style>
+
+    <style name="PrefixTextAppearance.TextInputLayout"  parent="@android:style/TextAppearance">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:font">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextAppearence.App.Login"  parent="@android:style/TextAppearance">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:font">@font/rubik_regular</item>
+    </style>
+
+    <style name="custom_checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorControlActivated">@color/colaba_apptheme_blue</item>
+    </style>
+
+    <style name="Autocomplete">
+        <item name="colorControlNormal">@color/grey_color_three</item>
+        <item name="colorControlActivated">@color/colaba_primary_color</item>
+    </style>
+
+    <style name="animation">
+        <item name="android:windowEnterAnimation">@anim/in_animation</item>
+        <item name="android:windowExitAnimation">@anim/out_animation</item>
+    </style>
+
+    <style name="noAnimTheme" parent="android:Theme">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!--
+    <style name="checkBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal">@drawable/checkbox_unchecked</item>
+        <item name="colorControlActivated">@drawable/checkbox_checked</item>
+        <item name="colorControlHighlight">@drawable/checkbox_checked</item>
+    </style> -->
+
+<!--
+    <style name="inputError" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colaba_red_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:font">@font/rubik_regular</item>
+    </style> -->
+
+</resources>

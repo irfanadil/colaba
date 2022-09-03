@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:text="@string/race"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="15sp"
+        android:textColor="@color/grey_color_one"/>
+
+    <LinearLayout
+        android:id="@+id/layout_race"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_race_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/content_bg_with_drop_shadow">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Thai"
+            android:fontFamily="@font/rubik_regular"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:textColor="@color/grey_color_two"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:text="@string/ethnicity"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="15sp"
+        android:textColor="@color/grey_color_one"/>
+
+    <RadioGroup
+        android:id="@+id/layout_ethnicity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp">
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layout_ethncity_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/content_bg_with_drop_shadow">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Argentinean"
+            android:fontFamily="@font/rubik_regular"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:textColor="@color/grey_color_two"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:text="@string/sex"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="15sp"
+        android:textColor="@color/grey_color_one"/>
+
+    <RadioGroup
+        android:id="@+id/layout_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp">
+
+    </RadioGroup>
+
+
+
+
+
+</LinearLayout>

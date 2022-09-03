@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colaba_loan_background">
+
+
+    <fragment
+        android:id="@+id/detail_fragment_activity"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colaba_loan_background"
+        app:defaultNavHost="true"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/detail_navigation" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/email_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:src="@drawable/blue_email_icon"
+        android:tint="@color/colaba_primary_color_thirty_alpha"
+        app:backgroundTint="@color/colaba_primary_color_thirty_alpha"
+        app:borderWidth="1dp"
+        app:elevation="1dp"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/message_fab"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blue_email_icon"
+        app:tint="@null" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/message_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:src="@drawable/blue_msg_icon"
+        android:tint="@color/colaba_primary_color_thirty_alpha"
+        app:backgroundTint="@color/colaba_primary_color_thirty_alpha"
+        app:borderWidth="1dp"
+        app:elevation="2dp"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        app:layout_constraintStart_toEndOf="@+id/email_fab"
+        app:layout_constraintTop_toTopOf="@+id/email_fab"
+        app:tint="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/phone_fab"
+        android:autoLink="phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:src="@drawable/blue_phone_icon"
+        android:tint="@color/colaba_primary_color_thirty_alpha"
+        app:backgroundTint="@color/colaba_primary_color_thirty_alpha"
+        app:borderWidth="1dp"
+        app:elevation="3dp"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/message_fab"
+        app:layout_constraintTop_toTopOf="@+id/message_fab"
+        app:srcCompat="@drawable/blue_phone_icon"
+        app:tint="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/request_doc_fab"
+        android:autoLink="phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="12dp"
+        android:clickable="true"
+        android:background="@color/colaba_primary_color"
+        app:srcCompat="@drawable/ic_plus"
+        app:borderWidth="1dp"
+        app:elevation="3dp"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone_fab"
+        app:layout_constraintTop_toTopOf="@+id/phone_fab"
+        app:tint="@null"
+        android:visibility="gone"/>
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

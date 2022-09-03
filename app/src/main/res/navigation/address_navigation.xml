@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_primary_borrower_info">
+
+    <fragment
+        android:id="@+id/navigation_primary_borrower_info"
+        android:name="com.rnsoft.colabademo.activities.addresses.info.PrimaryBorrowerInfoFragment"
+        android:label="@string/primary_borrower_info"
+        tools:layout="@layout/primary_borrower_info_layout">
+
+        <action
+            android:id="@+id/action_info_current_address"
+            app:destination="@id/navigation_current_address"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_info_mailing_address"
+            app:destination="@id/navigation_mailing_address"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_info_previous_address"
+            app:destination="@id/navigation_previous_address"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_info_unmarried_addendum"
+            app:destination="@id/navigation_unmarried"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_marriage_info"
+            app:destination="@id/navigation_marriage_detail"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_info_active_duty"
+            app:destination="@id/navigation_active_duty"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_info_reserve"
+            app:destination="@id/navigation_reserve"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_info_non_pr"
+            app:destination="@id/navigation_non_permanent"
+            app:enterAnim="@anim/slide_up" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_current_address"
+        android:name="com.rnsoft.colabademo.CurrentResidenceFragment"
+        android:label="@string/current_residence"
+        tools:layout="@layout/current_residence_layout">
+
+        <action
+            android:id="@+id/action_info_mailing_address"
+            app:destination="@id/navigation_mailing_address"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_mailing_address"
+        android:name="com.rnsoft.colabademo.MailingAddressFragment"
+        android:label="@string/mailing_address"
+        tools:layout="@layout/mailing_address_layout" />
+
+    <fragment
+        android:id="@+id/navigation_previous_address"
+        android:name="com.rnsoft.colabademo.PreviousResidenceFragment"
+        android:label="@string/previous_residence"
+        tools:layout="@layout/previous_residence_layout">
+
+        <action
+            android:id="@+id/action_info_mailing_address"
+            app:destination="@id/navigation_mailing_address"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_non_permanent"
+        android:name="com.rnsoft.colabademo.NonPermanentFragment"
+        android:label="@string/non_pr"
+        tools:layout="@layout/non_permenant_resident_layout" />
+
+    <fragment
+        android:id="@+id/navigation_reserve"
+        android:name="com.rnsoft.colabademo.ReserveFragment"
+        android:label="@string/mailing_address"
+        tools:layout="@layout/reserve_layout" />
+
+    <fragment
+        android:id="@+id/navigation_unmarried"
+        android:name="com.rnsoft.colabademo.UnMarriedFragment"
+        android:label="@string/unmarried_addendum"
+        tools:layout="@layout/unmarried_layout" />
+
+    <fragment
+        android:id="@+id/navigation_marriage_detail"
+        android:name="com.rnsoft.colabademo.MarriageDetailFragment"
+        android:label="@string/unmarried_addendum"
+        tools:layout="@layout/spouse_detail_layout" />
+
+    <fragment
+        android:id="@+id/navigation_active_duty"
+        android:name="com.rnsoft.colabademo.ActiveDutyFragment"
+        android:label="@string/active_duty_personel"
+        tools:layout="@layout/active_duty_layout" />
+
+
+    <fragment
+        android:id="@+id/navigation_test_fields"
+        android:name="com.rnsoft.colabademo.TestFieldsFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/test_fields_layout" />
+
+</navigation>

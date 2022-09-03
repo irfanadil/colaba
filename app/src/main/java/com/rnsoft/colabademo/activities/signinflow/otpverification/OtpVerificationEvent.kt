@@ -1,0 +1,3 @@
+package com.rnsoft.colabademo
+
+class OtpVerificationEvent(val otpVerificationResponse: OtpVerificationResponse)

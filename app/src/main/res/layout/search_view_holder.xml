@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_view_holder_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_view_holder_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/searchBorrowerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            android:text="@string/micheal_blakeley"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/searchBorrowerStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:text="@string/application_started"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="@color/colaba_apptheme_blue"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/searchBorrowerName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/searchBorrowerName" />
+
+        <TextView
+            android:id="@+id/searchBorrowerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="@color/grey_color_three"
+            android:textSize="12sp"
+            android:text="@string/micheal_blakeley_file_number"
+            app:layout_constraintEnd_toEndOf="@+id/searchBorrowerStatus"
+            app:layout_constraintTop_toBottomOf="@+id/searchBorrowerStatus" />
+
+        <TextView
+            android:id="@+id/searchBorrowerAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="@string/micheal_blakeley_address"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="@color/grey_color_three"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/searchBorrowerName"
+            app:layout_constraintTop_toBottomOf="@+id/searchBorrowerName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

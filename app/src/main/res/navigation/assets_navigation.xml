@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_asset_tab">
+
+
+    <fragment
+        android:id="@+id/navigation_asset_tab"
+        android:name="com.rnsoft.colabademo.AssetsTabFragment"
+        android:label="@string/assets"
+        tools:layout="@layout/dynamic_asset_fragment_layout">
+
+        <action
+            android:id="@+id/action_assets_bank_account"
+            app:destination="@id/navigation_bank_account"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_assets_retirement"
+            app:destination="@id/navigation_retirement_fragment"
+            app:enterAnim="@anim/slide_up" />
+
+
+        <action
+            android:id="@+id/action_assets_stocks_bond"
+            app:destination="@id/navigation_stock_bonds"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_assets_proceeds_transaction"
+            app:destination="@id/navigation_proceed_from_transaction"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_assets_other"
+            app:destination="@id/navigation_other_asset"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_assets_gift"
+            app:destination="@id/navigation_gift_assets"
+            app:enterAnim="@anim/slide_up" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_b_assets_one"
+        android:name="com.rnsoft.colabademo.BorrowerOneAssets"
+        android:label="@string/assets"
+        tools:layout="@layout/dynamic_asset_fragment_layout" />
+
+    <fragment
+        android:id="@+id/navigation_b_assets_two"
+        android:name="com.rnsoft.colabademo.BorrowerTwoAssets"
+        android:label="@string/assets"
+        tools:layout="@layout/dynamic_asset_fragment_layout" />
+
+
+
+    <fragment
+        android:id="@+id/navigation_b_assets_four"
+        android:name="com.rnsoft.colabademo.BorrowerFourAssets"
+        android:label="@string/assets"
+        tools:layout="@layout/dynamic_asset_fragment_layout" />
+
+
+    <fragment
+        android:id="@+id/navigation_bank_account"
+        android:name="com.rnsoft.colabademo.BankAccountFragment"
+        android:label="@string/assets"
+        tools:layout="@layout/bank_account_layout" />
+
+    <fragment
+        android:id="@+id/navigation_retirement_fragment"
+        android:name="com.rnsoft.colabademo.RetirementFragment"
+        android:label="@string/assets"
+        tools:layout="@layout/retirement_layout" />
+
+
+    <fragment
+        android:id="@+id/navigation_stock_bonds"
+        android:name="com.rnsoft.colabademo.StockBondsFragment"
+        android:label="@string/assets"
+        tools:layout="@layout/stock_bonds_layout" />
+
+
+    <fragment
+        android:id="@+id/navigation_proceed_from_transaction"
+        android:name="com.rnsoft.colabademo.ProceedFromTransactionFragment"
+        android:label="@string/assets"
+        tools:layout="@layout/proceed_from_trans_layout" />
+
+
+    <fragment
+        android:id="@+id/navigation_other_asset"
+        android:name="com.rnsoft.colabademo.OtherAssetsFragment"
+        android:label="@string/assets"
+        tools:layout="@layout/other_assets_layout" />
+
+
+    <fragment
+        android:id="@+id/navigation_gift_assets"
+        android:name="com.rnsoft.colabademo.GiftsAssetsFragment"
+        android:label="@string/assets"
+        tools:layout="@layout/other_assets_layout" />
+
+</navigation>

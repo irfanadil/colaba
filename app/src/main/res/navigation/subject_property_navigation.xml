@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subject_property_navigation"
+    app:startDestination="@+id/nav_sub_property_refinance">
+
+    <fragment
+        android:id="@+id/nav_sub_property_purchase"
+        android:name="com.rnsoft.colabademo.SubjectPropertyPurchase"
+        android:label="@string/subject_property"
+        tools:layout="@layout/subject_property_purchase" >
+
+        <action
+            android:id="@+id/action_mixed_property"
+            app:destination="@id/nav_mixed_use_property"
+            app:enterAnim="@anim/slide_up"/>
+
+        <action
+            android:id="@+id/action_address"
+            app:destination="@id/nav_sub_property_address"
+            app:enterAnim="@anim/slide_up"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_sub_property_address"
+        android:name="com.rnsoft.colabademo.SubPropertyAddressFragment"
+        android:label="@string/subject_property_address"
+        tools:layout="@layout/common_address_layout">
+
+        <action
+            android:id="@+id/action_back_fromAddress_toPurchase"
+            app:destination="@id/nav_sub_property_purchase"
+            app:enterAnim="@anim/slide_down"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_mixed_use_property"
+        android:name="com.rnsoft.colabademo.MixedUsePropertyFragment"
+        android:label="@string/mixed_use_property"
+        tools:layout="@layout/mixed_use_property">
+
+        <action
+            android:id="@+id/action_back_from_mixedproperty_toPurchase"
+            app:destination="@id/nav_sub_property_purchase"
+            app:enterAnim="@anim/slide_down"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_sub_property_refinance"
+        android:name="com.rnsoft.colabademo.SubjectPropertyRefinance"
+        android:label="@string/subject_property"
+        tools:layout="@layout/sub_property_refinance">
+
+        <action
+            android:id="@+id/action_mixed_property"
+            app:destination="@id/nav_mixed_use_property"
+            app:enterAnim="@anim/slide_up"/>
+
+        <action
+            android:id="@+id/action_address"
+            app:destination="@id/nav_sub_property_address"
+            app:enterAnim="@anim/slide_up"/>
+
+        <action
+            android:id="@+id/action_refinance_first_mortgage"
+            app:destination="@id/nav_first_mortage"
+            app:enterAnim="@anim/slide_up"/>
+
+        <action
+            android:id="@+id/action_refinance_sec_mortgage"
+            app:destination="@id/nav_sec_mortage"
+            app:enterAnim="@anim/slide_up"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_first_mortage"
+        android:name="com.rnsoft.colabademo.FirstMortgageFragment"
+        android:label="@string/first_mortgage"
+        tools:layout="@layout/first_mortgage_layout" />
+
+    <fragment
+        android:id="@+id/nav_sec_mortage"
+        android:name="com.rnsoft.colabademo.SecondMortgageFragment"
+        android:label="@string/sec_mortgage"
+        tools:layout="@layout/sub_property_second_mortgage" />
+
+</navigation>

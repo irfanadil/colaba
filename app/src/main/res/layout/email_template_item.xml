@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_template_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="Document Request with Intro"
+        android:textAlignment="center"
+        android:textColor="@color/grey_color_one"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_template_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque "
+        android:textColor="@color/grey_color_three"
+        android:textSize="13sp"
+        android:layout_marginBottom="20dp"/>
+
+
+</LinearLayout>

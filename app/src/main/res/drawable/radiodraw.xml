@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" >
+        <shape  android:shape="oval" >
+            <stroke android:width="2dp" android:color="@color/plus_circle_inside_color_with_thirty_alpha"/>
+            <size android:width="20dp" android:height="20dp"/>
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <stroke android:width="6dp" android:color="@color/colaba_apptheme_blue"/>
+                    <size android:width="15dp" android:height="15dp"/>
+                    <solid android:color="@color/white"/>
+                </shape>
+            </item>
+            <item android:top="8dp" android:bottom="8dp" android:left="8dp" android:right="8dp">
+                <shape android:shape="oval">
+                    <solid android:width="1dp" android:color="@color/white"/>
+                    <size android:width="5dp" android:height="5dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

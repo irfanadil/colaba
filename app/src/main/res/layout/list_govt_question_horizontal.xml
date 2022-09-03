@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_container"
+    android:layout_width="292dp"
+    android:layout_height="wrap_content"
+    android:paddingStart="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:background="@drawable/content_bg_with_drop_shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/questionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/rubik_regular"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Richard Glenn Randall"
+            android:textStyle="bold"
+            android:textColor="@color/grey_color_one"
+            android:textSize="12sp"
+            android:drawablePadding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/no_question_image"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/toast_err"
+            app:layout_constraintBottom_toBottomOf="@+id/questionTitle"
+            app:layout_constraintStart_toEndOf="@+id/questionTitle"
+            app:layout_constraintTop_toTopOf="@+id/questionTitle" />
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_regular"
+            android:maxLines="2"
+            android:lines="2"
+            android:singleLine="false"
+            android:text="Are you borrowing any money for this real\nestate transaction (e.g., money for your ."
+            android:textColor="@color/grey_color_two"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionTitle" />
+
+        <ImageView
+            android:id="@+id/answer1_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/answer1_yes"
+            app:layout_constraintStart_toStartOf="@+id/question"
+            app:layout_constraintTop_toTopOf="@+id/answer1_yes"
+            app:srcCompat="@drawable/ic_answer_dash" />
+
+        <TextView
+            android:id="@+id/answer1_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/answer1_icon"
+            app:layout_constraintTop_toBottomOf="@+id/question" />
+
+        <ImageView
+            android:id="@+id/answer2_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/answer2_no"
+            app:layout_constraintStart_toStartOf="@+id/answer1_icon"
+            app:layout_constraintTop_toTopOf="@+id/answer2_no"
+            app:srcCompat="@drawable/ic_answer_dash" />
+
+        <TextView
+            android:id="@+id/answer2_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/answer2_icon"
+            app:layout_constraintTop_toBottomOf="@+id/answer1_yes" />
+
+        <TextView
+            android:id="@+id/answer1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="- "
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer1_yes"
+            app:layout_constraintStart_toEndOf="@+id/answer1_yes"
+            app:layout_constraintTop_toTopOf="@+id/answer1_yes" />
+
+        <TextView
+            android:id="@+id/answer2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="- "
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer2_no"
+            app:layout_constraintStart_toEndOf="@+id/answer2_no"
+            app:layout_constraintTop_toTopOf="@+id/answer2_no" />
+
+        <ImageView
+            android:id="@+id/answer3_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/answer3_na"
+            app:layout_constraintStart_toStartOf="@+id/answer2_icon"
+            app:layout_constraintTop_toTopOf="@+id/answer3_na"
+            app:srcCompat="@drawable/ic_answer_dash" />
+
+        <TextView
+            android:id="@+id/answer3_na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/answer3_icon"
+            app:layout_constraintTop_toBottomOf="@+id/answer2_no" />
+
+        <TextView
+            android:id="@+id/answer3_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="- "
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer3_na"
+            app:layout_constraintStart_toEndOf="@+id/answer3_na"
+            app:layout_constraintTop_toTopOf="@+id/answer3_na" />
+
+
+        <ImageView
+            android:id="@+id/answer4_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/answer4_na"
+            app:layout_constraintStart_toStartOf="@+id/answer2_icon"
+            app:layout_constraintTop_toTopOf="@+id/answer4_na"
+            app:srcCompat="@drawable/ic_answer_dash" />
+
+        <TextView
+            android:id="@+id/answer4_na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/answer4_icon"
+            app:layout_constraintTop_toBottomOf="@+id/answer3_na" />
+
+        <TextView
+            android:id="@+id/answer4_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="- "
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer4_na"
+            app:layout_constraintStart_toEndOf="@+id/answer4_na"
+            app:layout_constraintTop_toTopOf="@+id/answer4_na" />
+
+
+        <ImageView
+            android:id="@+id/answer5_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/answer5_na"
+            app:layout_constraintStart_toStartOf="@+id/answer2_icon"
+            app:layout_constraintTop_toTopOf="@+id/answer5_na"
+            app:srcCompat="@drawable/ic_answer_dash" />
+
+        <TextView
+            android:id="@+id/answer5_na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="N/a"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/answer5_icon"
+            app:layout_constraintTop_toBottomOf="@+id/answer4_na" />
+
+        <TextView
+            android:id="@+id/answer5_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="- "
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answer5_na"
+            app:layout_constraintStart_toEndOf="@+id/answer5_na"
+            app:layout_constraintTop_toTopOf="@+id/answer5_na" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

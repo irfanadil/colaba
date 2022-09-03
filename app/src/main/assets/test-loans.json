@@ -1,0 +1,132 @@
+[
+  LoanItem(
+    "loanApplicationId": 2175,
+    "firstName": "Qumber",
+    "lastName": "Kazmi",
+    "coBorrowerCount": 1,
+    "activityTime": "2021-06-15T08:11:35.6210342Z",
+    "loanPurpose": "Purchase",
+    "email": "qumber@gmail.com",
+    "cellNumber": "33333333333",
+    "documents": 5,
+    "milestone": "Processing",
+    "detail": (
+      "loanAmount": 5000,
+      "propertyValue": 6000,
+      "address": (
+        "street": null,
+        "unit": null,
+        "city": null,
+        "stateId": null,
+        "zipCode": null,
+        "countryId": null,
+        "countryName": null,
+        "stateName": null
+      )
+    )
+  ),
+  {
+    "loanApplicationId": 20018,
+    "firstName": "Sohail",
+    "lastName": "Ahmed",
+    "coBorrowerCount": 1,
+    "activityTime": "2021-06-18T08:27:29.7625446Z",
+    "loanPurpose": "Purchase",
+    "email": "khatri03@gmail.com",
+    "cellNumber": "2142715414",
+    "documents": null,
+    "milestone": "Application Started",
+    "detail": {
+      "loanAmount": 239999,
+      "propertyValue": 299999,
+      "address": {
+        "street": "st",
+        "unit": "",
+        "city": "Texas City",
+        "stateId": 0,
+        "zipCode": "11111",
+        "countryId": 1,
+        "countryName": "United States",
+        "stateName": "None"
+      }
+    }
+  },
+  {
+    "loanApplicationId": 20019,
+    "firstName": "Sohail",
+    "lastName": "Ahmed",
+    "coBorrowerCount": 0,
+    "activityTime": "2021-06-20T20:31:29.4074677Z",
+    "loanPurpose": "Purchase",
+    "email": "khatri03@gmail.com",
+    "cellNumber": "2142715414",
+    "documents": null,
+    "milestone": "Application Started",
+    "detail": {
+      "loanAmount": 355555,
+      "propertyValue": 444444,
+      "address": {
+        "street": "st",
+        "unit": "",
+        "city": "Texas City",
+        "stateId": 0,
+        "zipCode": "11111",
+        "countryId": 1,
+        "countryName": "United States",
+        "stateName": "None"
+      }
+    }
+  },
+  {
+    "loanApplicationId": 20022,
+    "firstName": "Sohail",
+    "lastName": "Ahmed",
+    "coBorrowerCount": 0,
+    "activityTime": "2021-06-21T09:18:09.6327092Z",
+    "loanPurpose": "Purchase",
+    "email": "khatri03@gmail.com",
+    "cellNumber": "2142715414",
+    "documents": null,
+    "milestone": "Application Started",
+    "detail": {
+      "loanAmount": 280000,
+      "propertyValue": 350000,
+      "address": {
+        "street": "st",
+        "unit": "",
+        "city": "Texas City",
+        "stateId": 0,
+        "zipCode": "11111",
+        "countryId": 1,
+        "countryName": "United States",
+        "stateName": "None"
+      }
+    }
+  },
+  {
+    "loanApplicationId": 20024,
+    "firstName": "Quincy",
+    "lastName": "Bird",
+    "coBorrowerCount": 0,
+    "activityTime": "2021-06-21T10:44:15.9836984Z",
+    "loanPurpose": "Purchase",
+    "email": "xywixiv@mailinator.com",
+    "cellNumber": "2222222222",
+    "documents": null,
+    "milestone": "Application Started",
+    "detail": {
+      "loanAmount": null,
+      "propertyValue": null,
+      "address": {
+        "street": null,
+        "unit": null,
+        "city": null,
+        "stateId": null,
+        "zipCode": null,
+        "countryId": null,
+        "countryName": null,
+        "stateName": null
+      }
+    }
+  }
+]

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_question_tab">
+
+    <fragment
+        android:id="@+id/navigation_question_tab"
+        android:name="com.rnsoft.colabademo.GovtQuestionsTabFragment"
+        android:label="@string/govt_questions"
+        tools:layout="@layout/govt_question_tab_layout">
+
+
+        <action
+            android:id="@+id/action_family_affiliation"
+            app:destination="@id/navigation_family_affiliation"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_undisclosed_borrowerfund"
+            app:destination="@id/navigation_undisclosed_borrower_fund"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_child_support"
+            app:destination="@id/navigation_child_support"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_bankruptcy"
+            app:destination="@id/navigation_bankruptcy"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_priority_liens"
+            app:destination="@id/navigation_priority_liens"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_ownership_interest"
+            app:destination="@id/navigation_ownership_interest"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_outstanding"
+            app:destination="@id/navigation_outstanding"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_federal_debt"
+            app:destination="@id/navigation_federal_debt"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_debt_co"
+            app:destination="@id/navigation_debt_co"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_pre_for_closure"
+            app:destination="@id/navigation_pre_for_closure"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_fore_closure_property"
+            app:destination="@id/navigation_fore_closure_property"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_title_conveyance"
+            app:destination="@id/navigation_title_conveyance"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_party_to"
+            app:destination="@id/navigation_party_to"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_undisclosed_mortgage"
+            app:destination="@id/navigation_undisclosed_mortgage"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_undisclosed_credit"
+            app:destination="@id/navigation_undisclosed_credit"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_undisclosed_borrower_fund"
+            app:destination="@id/navigation_undisclosed_borrower_fund"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_asian"
+            app:destination="@id/navigation_asian"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_native_hawai"
+            app:destination="@id/navigation_native_hawai"
+            app:enterAnim="@anim/slide_up" />
+
+
+        <action
+            android:id="@+id/action_hispanic"
+            app:destination="@id/navigation_hispanic"
+            app:enterAnim="@anim/slide_up" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_child_support"
+        android:name="com.rnsoft.colabademo.ChildSupportFragment"
+        android:label="@string/govt_questions"
+        tools:layout="@layout/child_support_layout" />
+
+    <fragment
+        android:id="@+id/navigation_ownership_interest"
+        android:name="com.rnsoft.colabademo.OwnershipInterestInPropertyFragment"
+        android:label="@string/ownership_percentage"
+        tools:layout="@layout/ownership_interest_in_property_layout" />
+
+    <fragment
+        android:id="@+id/navigation_priority_liens"
+        android:name="com.rnsoft.colabademo.PriorityLiensFragment"
+        android:label="@string/priority_liens"
+        tools:layout="@layout/priority_liens_layout" />
+
+    <fragment
+        android:id="@+id/navigation_bankruptcy"
+        android:name="com.rnsoft.colabademo.BankruptcyFragment"
+        android:label="@string/bankruptcy"
+        tools:layout="@layout/bankruptcy_layout" />
+
+    <fragment
+        android:id="@+id/navigation_outstanding"
+        android:name="com.rnsoft.colabademo.OutstandingFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/outstanding_layout" />
+
+    <fragment
+        android:id="@+id/navigation_federal_debt"
+        android:name="com.rnsoft.colabademo.FederalDebt"
+        android:label="@string/test_id"
+        tools:layout="@layout/federal_dept_layout" />
+
+    <fragment
+        android:id="@+id/navigation_debt_co"
+        android:name="com.rnsoft.colabademo.DebtCoFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/debt_co_layout" />
+
+    <fragment
+        android:id="@+id/navigation_pre_for_closure"
+        android:name="com.rnsoft.colabademo.PreForeclosureFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/pre_force_closure_layout" />
+
+    <fragment
+        android:id="@+id/navigation_fore_closure_property"
+        android:name="com.rnsoft.colabademo.ForeClosurePropertyFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/fore_closure_property_layout" />
+
+    <fragment
+        android:id="@+id/navigation_title_conveyance"
+        android:name="com.rnsoft.colabademo.TitleConveyanceFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/title_conveyance_layout" />
+
+    <fragment
+        android:id="@+id/navigation_party_to"
+        android:name="com.rnsoft.colabademo.PartyToFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/party_to_layout" />
+
+    <fragment
+        android:id="@+id/navigation_undisclosed_mortgage"
+        android:name="com.rnsoft.colabademo.UndisclosedMortgageFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/undisclosed_mortgage_layout" />
+
+    <fragment
+        android:id="@+id/navigation_undisclosed_credit"
+        android:name="com.rnsoft.colabademo.UndisclosedCreditFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/undisclosed_credit_layout" />
+
+    <fragment
+        android:id="@+id/navigation_undisclosed_borrower_fund"
+        android:name="com.rnsoft.colabademo.UndisclosedBorrowerFundFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/undisclosed_borrower_fund_layout" />
+
+    <fragment
+        android:id="@+id/navigation_family_affiliation"
+        android:name="com.rnsoft.colabademo.FamilyFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/family_layout" />
+
+    <fragment
+        android:id="@+id/navigation_asian"
+        android:name="com.rnsoft.colabademo.AsianFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/asian_layout" />
+
+    <fragment
+        android:id="@+id/navigation_native_hawai"
+        android:name="com.rnsoft.colabademo.NativeHawaiFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/native_hawaiian_layout" />
+
+    <fragment
+        android:id="@+id/navigation_hispanic"
+        android:name="com.rnsoft.colabademo.HispanicFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/hispanic_layout" />
+
+    <fragment
+        android:id="@+id/navigation_demographic"
+        android:name="com.rnsoft.colabademo.DemoGraphicInfoFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/demographic_info_layout" />
+
+    <fragment
+        android:id="@+id/navigation_race_details"
+        android:name="com.rnsoft.colabademo.RaceDetailFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/demographic_detail_layout" />
+
+    <fragment
+        android:id="@+id/navigation_ethnicity_details"
+        android:name="com.rnsoft.colabademo.EthnicityDetailFragment"
+        android:label="@string/test_id"
+        tools:layout="@layout/demographic_detail_layout" />
+
+
+</navigation>

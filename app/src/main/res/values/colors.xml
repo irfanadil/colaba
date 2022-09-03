@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="doc_filter_txt_color">#A7A7A7</color>
+    <color name="primary_color">#FFF8F8F8</color>
+    <color name="orange">#FF3D00</color>
+    <color name="grey">#D9E8E6</color>
+    <color name="green_circle"> #00AD46</color>
+    <color name="colaba_loan_background">#FFF8F8F8</color>
+    <color name="half_white">#FBFBFB</color>
+    <color name="half_white_one">#F8F8F8</color>
+    <color name="layout_border_color">#E5E5E5</color>
+    <color name="colaba_primary_color">#FF4484F4</color>
+    <color name="colaba_primary_color_half_alpha">#804484F4</color>
+    <color name="colaba_primary_color_thirty_alpha">#4D4484F4</color>
+    <color name="colaba_primary_color_with_alpha_one">#084484F4</color>
+    <!--<color name="filter_btn_border_color">#D2E2FF</color> -->
+    <color name="colaba_blue_light">#D2E2FF</color>
+    <color name="colaba_invisible_blue">#F5F9FF</color>
+    <color name="colaba_primary_color_five_alpha">#0D4484F4</color>
+    <color name="grey_color_one">#FF4E4E4E</color>
+    <color name="grey_color_two">#FF7E829E</color>
+    <color name="grey_color_three">#FFA7A7A7</color>
+    <color name="grey_color_four">#FFCCCCCC</color>
+    <color name="grey_color_five">#E2E2E2</color>
+    <color name="grey_color_six">#FAFAFA</color>
+    <color name="colaba_line_separator">#FFCCCCCC</color>
+    <color name="colaba_red_color">#FFFF5652</color>
+    <color name="colaba_grey_line_color">#FF707070</color>
+    <color name="loan_view_holder_separator">#80E5E5E5</color>
+    <color name="colaba_grey_fill">#4DE5E5E5</color>
+    <color name="colaba_apptheme_blue">#FF4484F4</color>
+    <color name="plus_circle_inside_color">#FF4484F4</color>
+    <color name="plus_circle_inside_color_with_thirty_alpha">#4D4484F4</color>
+    <color name="plus_circle_inside_color_with_ten_alpha">#1A4484F4</color>
+    <color name="asset_cell_separator">#1A4484F4</color>
+    <color name="colaba_holder_background">#0D7E829E</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+    <color name="grey_border_one">#DBDBDB</color>
+    <color name="txt_color_app_headings">#4E4E4E</color>
+    <color name="txt_color_no_doc">#707070</color>
+    <color name="filter_blue">#7bb3d8</color>
+    <color name="filter_yellow">#FFBB00</color>
+    <color name="filter_green">#00AD46</color>
+    <color name="filter_grey">#7E829E</color>
+    <color name="content_background_color">#80F8F8F8</color>
+    <color name="colaba_app_border_color">#E5E5E5</color>
+    <color name="border_grey_light">#CCCCCC</color>
+
+
+    <color name="borrower_overview_background">#FBFBFB</color>
+   <color name="asset_bottom_bar"> #FFF6F6F6</color>
+
+</resources>

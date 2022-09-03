@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/login_fragment_id">
+
+    <fragment
+        android:id="@+id/login_fragment_id"
+        android:name="com.rnsoft.colabademo.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/login_layout">
+        <action
+            android:id="@+id/action_login_to_fogot_password"
+            app:destination="@id/forgot_password_id" />
+
+        <action
+            android:id="@+id/action_login_to_phone_number"
+            app:destination="@id/phone_number_id" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgot_password_id"
+        android:name="com.rnsoft.colabademo.ForgotPasswordFragment"
+        android:label="@string/forgot_password"
+        tools:layout="@layout/password_forgot">
+        <argument
+            android:name="flowStepNumber"
+            android:defaultValue="1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/forgot_password_to_login_screen"
+            app:destination="@id/back_to_login_id"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/signup_nav_host_fragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/phone_number_id"
+        android:name="com.rnsoft.colabademo.PhoneNumberFragment"
+        tools:layout="@layout/phone_number_layout">
+        <argument
+            android:name="flowStepNumber"
+            android:defaultValue="2"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_phone_number_to_otp_verification"
+            app:destination="@id/otp_verification_id" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/otp_verification_id"
+        android:name="com.rnsoft.colabademo.OtpFragment"
+        tools:layout="@layout/otp_screen_layout">
+
+        <argument
+            android:name="flowStepNumber"
+            android:defaultValue="2"
+            app:argType="integer" />
+        <action
+            android:id="@+id/move_to_back_to_login_screen"
+            app:destination="@id/back_to_login_id" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/back_to_login_id"
+        android:name="com.rnsoft.colabademo.BackToLoginFragment"
+        tools:layout="@layout/back_to_login">
+
+        <argument
+            android:name="flowStepNumber"
+            android:defaultValue="2"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_back_to_login_fragment"
+            app:destination="@id/login_fragment_id"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/signup_nav_host_fragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="61dp">
+
+    <LinearLayout
+        android:id="@+id/layout_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/app_status_circle_blue"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_circle_blue"
+                app:civ_border_color="@color/colaba_apptheme_blue"
+                app:civ_border_overlay="true"
+                app:civ_border_width="2dp"
+                android:visibility="visible"/>
+
+            <View
+                android:id="@+id/app_status_line_blue"
+                android:layout_width="2dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="36dp"
+                android:background="@color/colaba_apptheme_blue"
+                android:visibility="visible" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/app_status_circle_grey"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_circle_grey"
+                app:civ_border_color="#cecdcc"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/app_status_line_grey"
+                android:layout_width="2dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="36dp"
+                android:background="@drawable/incomplete_status_dotted_line"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/app_status_circle_red"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_circle_red"
+                app:civ_border_color="@color/colaba_red_color"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/app_status_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Application Status"
+                android:textColor="@color/txt_color_app_headings"
+                android:textSize="17sp"
+                android:fontFamily="@font/rubik_regular"/>
+
+            <TextView
+                android:id="@+id/app_status_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_status_title"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="15 July 2021"
+                android:textColor="@color/grey_color_three"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/tick_status"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="4.5dp"
+                android:src="@drawable/check" />
+
+            <ImageView
+                android:id="@+id/cross_status"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4.5dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_close"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

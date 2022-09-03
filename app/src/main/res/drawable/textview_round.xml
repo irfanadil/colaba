@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- SHADOW -->
+            <!--<item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#93DF3A"/>
+                    <stroke android:width="3dp" android:color="#93DF3A"/>
+                    <corners android:radius="19dp" />
+                </shape>
+
+            </item>
+
+            <item android:bottom="5px" android:right="5px" android:left="5px" android:top="5px" >
+                <shape>
+                    <padding android:bottom="5dp" android:top="5dp" android:right="5dp" android:left="5dp"/>
+                    <gradient
+                        android:startColor="@color/app_theme_color"
+                        android:endColor="@color/app_theme_color"
+                        android:angle="270"/>
+                    <corners android:radius="19dp"/>
+                </shape>
+            </item> -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#CAF8F6F6"/>
+                    <corners android:radius="100dip" />
+                </shape>
+            </item>
+
+            <item
+                android:left="5dp"
+                android:right="0dp"
+                android:top="0dp"
+                android:bottom="0dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@android:color/white"/>
+                    <stroke android:width="3dp" android:color="@color/colaba_apptheme_blue"/>
+                    <corners android:radius="5dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_focused="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colaba_grey_fill"/>
+            <corners android:radius="100dip"/>
+            <!--<stroke android:width="3dp" android:color="#5F5D5D"/>-->/>
+        </shape>
+    </item>
+</selector>

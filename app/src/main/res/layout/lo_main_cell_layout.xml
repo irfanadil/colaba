@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/second_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/third_container"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/first_container"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/second_lo_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/b1" />
+
+            <TextView
+                android:id="@+id/second_lo_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Jenny Dan"
+                android:textColor="@color/grey_color_two"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/second_lo_image"
+                app:layout_constraintStart_toStartOf="@+id/second_lo_image"
+                app:layout_constraintTop_toBottomOf="@+id/second_lo_image" />
+
+            <TextView
+                android:id="@+id/second_lo_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_regular"
+
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="AHC Lending"
+                android:textColor="@color/grey_color_three"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/second_lo_image"
+                app:layout_constraintStart_toStartOf="@+id/second_lo_image"
+                app:layout_constraintTop_toBottomOf="@+id/second_lo_name" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/first_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toStartOf="@+id/second_container"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/first_lo_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/b3" />
+
+            <TextView
+                android:id="@+id/first_lo_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="John Doe"
+                android:textColor="@color/grey_color_two"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/first_lo_image"
+                app:layout_constraintStart_toStartOf="@+id/first_lo_image"
+                app:layout_constraintTop_toBottomOf="@+id/first_lo_image" />
+
+            <TextView
+                android:id="@+id/first_lo_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_regular"
+
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Texas Trust Hom.."
+                android:textColor="@color/grey_color_three"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/first_lo_image"
+                app:layout_constraintStart_toStartOf="@+id/first_lo_image"
+                app:layout_constraintTop_toBottomOf="@+id/first_lo_name" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/third_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="invisible"
+
+            app:layout_constraintEnd_toStartOf="@+id/fourth_container"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/second_container"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/third_lo_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/b2" />
+
+            <TextView
+                android:id="@+id/third_lo_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Jonny D"
+                android:textColor="@color/grey_color_two"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/third_lo_image"
+                app:layout_constraintStart_toStartOf="@+id/third_lo_image"
+                app:layout_constraintTop_toBottomOf="@+id/third_lo_image" />
+
+            <TextView
+                android:id="@+id/third_lo_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_regular"
+
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Lendova"
+                android:textColor="@color/grey_color_three"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/third_lo_image"
+                app:layout_constraintStart_toStartOf="@+id/third_lo_image"
+                app:layout_constraintTop_toBottomOf="@+id/third_lo_name" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/fourth_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="invisible"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/third_container"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/fourth_lo_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/b1" />
+
+            <TextView
+                android:id="@+id/fourth_lo_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Jenny Dan"
+                android:textColor="@color/grey_color_two"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/fourth_lo_image"
+                app:layout_constraintStart_toStartOf="@+id/fourth_lo_image"
+                app:layout_constraintTop_toBottomOf="@+id/fourth_lo_image" />
+
+            <TextView
+                android:id="@+id/fourth_lo_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="AHC Lending"
+                android:textColor="@color/grey_color_three"
+                android:textSize="11sp"
+
+                app:layout_constraintEnd_toEndOf="@+id/fourth_lo_image"
+                app:layout_constraintStart_toStartOf="@+id/fourth_lo_image"
+                app:layout_constraintTop_toBottomOf="@+id/fourth_lo_name" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

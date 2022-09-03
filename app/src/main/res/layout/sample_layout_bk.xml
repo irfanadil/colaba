@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_white"
+    tools:context=".StartNewApplicationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_info_screen"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tab_top_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_grey_cross" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/start_new_application"
+            android:textColor="@color/grey_color_one"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <View
+            android:id="@+id/tab_top_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12sp"
+            android:background="@color/colaba_app_border_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview_start_application"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="52dp"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:isScrollContainer="false"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_info_screen">
+
+        <LinearLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:paddingBottom="200dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/find_contact_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/content_background_halfwhite"
+                android:button="@null"
+                android:drawableStart="@drawable/radiodraw"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/rubik_regular"
+                android:paddingStart="15dp"
+                android:text="@string/find_contact"
+                android:textColor="@color/grey_color_one"
+                android:textSize="15sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_find_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/content_bg_with_drop_shadow"
+                    android:orientation="vertical"
+                    android:paddingBottom="30dp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radiobtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="17dp"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableStart="@drawable/radiodraw"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:paddingStart="15dp"
+                        android:text="@string/find_contact"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/edittext_search_contact_style"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/radiobtn">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/searchEdittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@android:color/transparent"
+                            android:drawableEnd="@drawable/ic_search"
+                            android:fontFamily="@font/rubik_regular"
+                            android:hint="@string/search_contact"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/grey_color_four"
+                            android:textSize="13sp"
+                            android:textStyle="italic|bold" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/layout_style_flat_top"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:scrollbars="vertical"
+                    android:translationY="20dp"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_find_contact"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- layout create new contact -->
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/create_contact_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/content_background_halfwhite"
+                android:button="@null"
+                android:drawableStart="@drawable/radiodraw"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/rubik_regular"
+                android:paddingStart="15dp"
+                android:text="@string/create_new_contact"
+                android:textColor="@color/grey_color_one"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_create_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/content_bg_with_drop_shadow"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="17dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableStart="@drawable/radiodraw"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/create_new_contact"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/rubik_light"
+                    android:hint="@string/first_name"
+                    android:textColorHint="@color/primary_info_label_color"
+                    app:boxCollapsedPaddingTop="1dp"
+                    app:boxStrokeColor="@color/primary_info_line_color"
+                    app:boxStrokeWidth="0.5dp"
+                    app:boxStrokeWidthFocused="1dp"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextAppearance="@style/inputError"
+                    app:helperTextTextColor="@color/colaba_red_color"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:ems="10"
+                        android:fontFamily="@font/rubik_regular"
+                        android:imeOptions="actionNext"
+                        android:paddingStart="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="@dimen/ed_txt_size_primary_info" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/rubik_light"
+                    android:hint="@string/last_name"
+                    android:textColorHint="@color/primary_info_label_color"
+                    app:boxCollapsedPaddingTop="1dp"
+                    app:boxStrokeColor="@color/primary_info_line_color"
+                    app:boxStrokeWidth="0.5dp"
+                    app:boxStrokeWidthFocused="1dp"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextAppearance="@style/inputError"
+                    app:helperTextTextColor="@color/colaba_red_color"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:ems="10"
+                        android:fontFamily="@font/rubik_regular"
+                        android:imeOptions="actionNext"
+                        android:paddingStart="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="@dimen/ed_txt_size_primary_info" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/rubik_light"
+                    android:hint="@string/email_add"
+                    android:textColorHint="@color/primary_info_label_color"
+                    app:boxCollapsedPaddingTop="1dp"
+                    app:boxStrokeColor="@color/primary_info_line_color"
+                    app:boxStrokeWidth="0.5dp"
+                    app:boxStrokeWidthFocused="1dp"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextAppearance="@style/inputError"
+                    app:helperTextTextColor="@color/colaba_red_color"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/grey_color_two"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_two">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:fontFamily="@font/rubik_regular"
+                        android:imeOptions="actionNext"
+                        android:paddingStart="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="@dimen/ed_txt_size_primary_info" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_mobile_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="25dp"
+                    android:fontFamily="@font/rubik_light"
+                    android:hint="@string/mobile_number"
+                    android:textColorHint="@color/primary_info_label_color"
+                    app:boxCollapsedPaddingTop="1dp"
+                    app:boxStrokeColor="@color/primary_info_line_color"
+                    app:boxStrokeWidth="0.5dp"
+                    app:boxStrokeWidthFocused="1dp"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextAppearance="@style/inputError"
+                    app:helperTextTextColor="@color/colaba_red_color"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:digits="1234567890-()"
+                        android:ems="10"
+                        android:fontFamily="@font/rubik_regular"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="14"
+                        android:paddingStart="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="@dimen/ed_txt_size_primary_info" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/loan_purpose"
+                android:textColor="@color/grey_color_two"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/btn_loan_purchase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/purchase"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/btn_loan_refinance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="70dp"
+                    android:button="@drawable/radiodraw"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/refinance"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp" />
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/loan_goal"
+                android:textColor="@color/grey_color_two"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/btn_lower_payment_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:button="@drawable/radiodraw"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/lower_payments_term"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/btn_cashout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/cash_out"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/btn_debt_consolidation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="18dp"
+                    android:button="@drawable/radiodraw"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="15dp"
+                    android:text="@string/debt_consolidated"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    tools:ignore="RtlSymmetry" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colaba_app_border_color" />
+
+            <LinearLayout
+                android:id="@+id/assign_loan_officer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/content_background_full_white"
+                android:clickable="true"
+                android:gravity="start|center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:src="@drawable/ic_add_person" />
+
+                <TextView
+                    android:id="@+id/tv_residence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/assign_loan_officer"
+                    android:textColor="@color/colaba_apptheme_blue"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_create_app"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selector_btn_round"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/create_application"
+        android:textAlignment="center"
+        android:textColor="@color/text_color_selector"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- android:textColor="@color/text_color_selector"
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

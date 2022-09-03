@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="1st Dependent age"
+        android:textColorHint="@color/primary_info_label_color"
+        app:boxStrokeColor="@color/primary_info_line_color"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:boxCollapsedPaddingTop="1dp"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="@font/rubik_regular"
+            android:imeOptions="actionDone"
+            android:paddingStart="0dp"
+            android:singleLine="true"
+            android:textColor="@color/grey_color_one"
+            android:textSize="@dimen/ed_txt_size_primary_info" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_weight="1"
+        android:hint="2nd Dependent age"
+        android:textColorHint="@color/primary_info_label_color"
+        app:boxStrokeColor="@color/primary_info_line_color"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:boxCollapsedPaddingTop="1dp"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="@font/rubik_medium"
+            android:imeOptions="actionDone"
+            android:paddingStart="0dp"
+            android:paddingTop="30dp"
+            android:paddingEnd="0dp"
+            android:singleLine="true"
+            android:textColor="@color/grey_color_one"
+            android:textSize="@dimen/ed_txt_size_primary_info" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+{
+  "status": "Success",
+  "data": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI0MTA4NCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJtdWJhc2hpci5tY3VAbWFpbGluYXRvci5jb20iLCJGaXJzdE5hbWUiOiJBbGl5YSIsIkxhc3ROYW1lIjoiUHJhc2xhIiwiVGVuYW50Q29kZSI6ImxlbmRvdmEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiTUNVIiwiTG9hbiBPZmZpY2VyIl0sImV4cCI6MTYyNjkwNTQ5MSwiaXNzIjoicmFpbnNvZnRmbiIsImF1ZCI6InJlYWRlcnMifQ.ZED9J3CS9F65kuMSiaoY2PQkLZwYSZ-hLyyR2Ik7vRo",
+    "refreshToken": "wJ/m8xa6W+BW+jayDGj8IsVwuNS1oAteU/LM5ME09vU=",
+    "userProfileId": 41084,
+    "userName": "mubashir.mcu@mailinator.com",
+    "firstName": "Aliya",
+    "lastName": "Prasla",
+    "validFrom": "0001-01-01T00:00:00",
+    "validTo": "2021-07-21T22:11:31Z",
+    "refreshTokenValidTo": "2022-03-26T10:11:31.0133977Z",
+    "tokenType": 0,
+    "tokenTypeName": "AccessToken"
+  },
+  "message": null,
+  "code": "200"
+}

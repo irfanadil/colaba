@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.rnsoft.colabademo.DetailTabFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/detail_tab_layout" />
+
+   <fragment
+        android:id="@+id/docs_list_inner_fragment"
+        android:name="com.rnsoft.colabademo.DocumentListFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/detail_list_layout" />
+
+    <fragment
+        android:id="@+id/borrower_app_status_fragment"
+        android:name="com.rnsoft.colabademo.OverviewAppStatusFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/application_status_layout" />
+
+    <fragment
+        android:id="@+id/pdf_view_fragment_id"
+        android:name="com.rnsoft.colabademo.PdfViewFragment"
+        android:label="@string/pdf_view"
+        tools:layout="@layout/pdf_view_layout" />
+
+    <fragment
+        android:id="@+id/image_view_fragment_id"
+        android:name="com.rnsoft.colabademo.ImageViewFragment"
+        android:label="@string/image_view"
+        tools:layout="@layout/image_view_layout" />
+
+    <fragment
+        android:id="@+id/invitation_primary_borrower_fragment_id"
+        android:name="com.rnsoft.colabademo.InvitePrimaryBorrowerFragment"
+        android:label="@string/image_view"
+        tools:layout="@layout/invite_primary_borrower_layout" />
+
+    <fragment
+        android:id="@+id/navigation_pre_approval_fragment"
+        android:name="com.rnsoft.colabademo.PreApprovalFragment"
+        android:label="@string/image_view"
+        tools:layout="@layout/pre_approval_layout" />
+
+    <fragment
+        android:id="@+id/navigation_letter_on_demand"
+        android:name="com.rnsoft.colabademo.LetterOnDemandFragment"
+        android:label="@string/image_view"
+        tools:layout="@layout/letter_ondemand" />
+
+</navigation>

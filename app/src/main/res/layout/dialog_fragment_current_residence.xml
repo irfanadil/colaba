@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/crossImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borrowerName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/borrowerName"
+        app:srcCompat="@drawable/search_cross" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/save_continuelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:paddingTop="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/borrowerName"
+        app:layout_constraintTop_toBottomOf="@+id/sortBySepartor">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/recentIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:src="@drawable/ic_save_residence"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/save_continue"
+            android:textColor="@color/grey_color_two"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/recentIcon"
+            app:layout_constraintStart_toEndOf="@+id/recentIcon"
+            app:layout_constraintTop_toTopOf="@+id/recentIcon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/borrowerName"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="Save Current Residence?"
+        android:textColor="@color/grey_color_one"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/sortBySepartor"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/loan_view_holder_separator"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/borrowerName" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/discard_changes_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:paddingTop="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/borrowerName"
+        app:layout_constraintTop_toBottomOf="@+id/save_continuelayout">
+
+        <ImageView
+            android:id="@+id/pending_icon"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+
+            android:src="@drawable/ic_red_del_residence"
+            app:layout_constraintStart_toStartOf="@+id/discard_changes_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pendingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Discard Changes"
+
+            android:textColor="@color/biometric_error_color"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pending_icon"
+            app:layout_constraintStart_toEndOf="@+id/pending_icon"
+            app:layout_constraintTop_toTopOf="@+id/pending_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

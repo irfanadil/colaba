@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/income_navigation"
+    app:startDestination="@+id/navigation_income_tab">
+
+    <fragment
+        android:id="@+id/navigation_income_tab"
+        android:name="com.rnsoft.colabademo.IncomeTabFragment"
+        android:label="@string/income"
+        tools:layout="@layout/income_fragment_layout">
+
+        <action
+            android:id="@+id/action_add_prev_employment"
+            app:destination="@id/navigation_income_prev_employment"
+            app:enterAnim="@anim/slide_up" />
+
+
+        <action
+            android:id="@+id/action_add_current_employement"
+            app:destination="@id/navigation_income_current_employment"
+            app:enterAnim="@anim/slide_up" />
+
+
+        <action
+            android:id="@+id/action_prev_employment"
+            app:destination="@id/navigation_income_prev_employment"
+            app:enterAnim="@anim/slide_up" />
+
+
+        <action
+            android:id="@+id/action_current_employement"
+            app:destination="@id/navigation_income_current_employment"
+            app:enterAnim="@anim/slide_up" />
+
+
+        <action
+            android:id="@+id/action_self_employment"
+            app:destination="@id/navigation_selfEmployment"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_income_business"
+            app:destination="@id/navigation_business"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_income_military_pay"
+            app:destination="@id/navigation_military_pay"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_income_retirement"
+            app:destination="@id/navigation_retirement"
+            app:enterAnim="@anim/slide_up" />
+
+        <action
+            android:id="@+id/action_income_other"
+            app:destination="@id/navigation_other"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_b_income_one"
+        android:name="com.rnsoft.colabademo.BorrowerOneIncome"
+        android:label="@string/income"
+        tools:layout="@layout/income_fragment_layout">
+
+
+
+    </fragment>
+
+
+    <!-- current employment frag-->
+    <fragment
+        android:id="@+id/navigation_income_current_employment"
+        android:name="com.rnsoft.colabademo.IncomeCurrentEmployment"
+        android:label="@string/income"
+        tools:layout="@layout/income_current_employment">
+        <action
+            android:id="@+id/action_current_employment_address"
+            app:destination="@id/navigation_current_employment_address"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+    <!-- prev employment frag -->
+    <fragment
+        android:id="@+id/navigation_income_prev_employment"
+        android:name="com.rnsoft.colabademo.IncomePreviousEmployment"
+        android:label="@string/income"
+        tools:layout="@layout/income_previous_employment">
+        <action
+            android:id="@+id/action_prev_employment_address"
+            app:destination="@id/navigation_previous_employment_address"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+    <!-- self contractor-->
+    <fragment
+        android:id="@+id/navigation_selfEmployment"
+        android:name="com.rnsoft.colabademo.SelfEmploymentContractor"
+        android:label="@string/income"
+        tools:layout="@layout/self_empolyment_cont_layout">
+        <action
+            android:id="@+id/action_business_address"
+            app:destination="@id/navigation_business_address"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+    <!-- business fragment -->
+    <fragment
+        android:id="@+id/navigation_business"
+        android:name="com.rnsoft.colabademo.BusinessIncomeFragment"
+        android:label="@string/income"
+        tools:layout="@layout/income_business_layout">
+        <action
+            android:id="@+id/action_address"
+            app:destination="@id/navigation_business_address"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_military_pay"
+        android:name="com.rnsoft.colabademo.MilitaryIncomeFragment"
+        android:label="@string/income"
+        tools:layout="@layout/income_military_pay">
+        <action
+            android:id="@+id/action_military_address"
+            app:destination="@id/navigation_military_service_address"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_retirement"
+        android:name="com.rnsoft.colabademo.RetirementIncomeFragment"
+        android:label="@string/income"
+        tools:layout="@layout/income_retirement_layout">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_other"
+        android:name="com.rnsoft.colabademo.OtherIncomeFragment"
+        android:label="@string/income"
+        tools:layout="@layout/income_other_layout">
+        <action
+            android:id="@+id/action_address"
+            app:destination="@id/navigation_current_employment_address"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_current_employment_address"
+        android:name="com.rnsoft.colabademo.AddressCurrentEmployment"
+        android:label="@string/income"
+        tools:layout="@layout/address_income_employment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_previous_employment_address"
+        android:name="com.rnsoft.colabademo.AddressPrevEmployment"
+        android:label="@string/income"
+        tools:layout="@layout/address_prev_employment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_business_address"
+        android:name="com.rnsoft.colabademo.AddressBusiness"
+        android:label="@string/income"
+        tools:layout="@layout/address_business">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_military_service_address"
+        android:name="com.rnsoft.colabademo.AddressMilitaryService"
+        android:label="@string/income"
+        tools:layout="@layout/address_military_service">
+    </fragment>
+
+</navigation>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colaba_primary_color_with_alpha_one">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="false"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rich_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:rotation="360"
+                android:translationX="46dp"
+                android:translationY="-48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:srcCompat="@drawable/ic_key" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1"
+                app:srcCompat="@drawable/png_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="66dp"
+                android:text="@string/login_to_lender_portal"
+                android:textColor="@color/grey_color_one"
+                android:textSize="20sp"
+                app:fontFamily="@font/rubik_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/login_box"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="40dp"
+                    android:paddingBottom="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/email_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27dp"
+                        android:background="@drawable/ic_email_icon_svg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/emailTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:text="@string/email"
+                        android:textColor="@color/grey_color_two"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/email_icon"
+                        app:layout_constraintStart_toEndOf="@+id/email_icon"
+                        app:layout_constraintTop_toTopOf="@+id/email_icon" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/editTextEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:text="mobileuser1@mailinator.com"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/rubik_medium"
+                        app:layout_constraintEnd_toEndOf="@+id/email_separator"
+                        app:layout_constraintStart_toStartOf="@+id/email_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/email_icon" />
+
+                    <View
+                        android:id="@+id/email_separator"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@color/colaba_line_separator"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/email_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/email_icon" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/passwordIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        app:layout_constraintStart_toStartOf="@+id/email_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/emailErrorTextView"
+                        app:srcCompat="@drawable/ic_lock_icon_svg" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/passwordTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/password"
+                        android:textColor="@color/grey_color_two"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/passwordIcon"
+                        app:layout_constraintStart_toStartOf="@+id/emailTextView"
+                        app:layout_constraintTop_toTopOf="@+id/passwordIcon" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/editTextPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:text="test123"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/rubik_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/passwordImageShow"
+                        app:layout_constraintStart_toStartOf="@+id/passwordIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/passwordIcon" />
+
+                    <View
+                        android:id="@+id/password_separator"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@color/colaba_line_separator"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/passwordIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/passwordIcon" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/passwordImageShow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/password_separator"
+                        app:layout_constraintEnd_toEndOf="@+id/password_separator"
+                        app:srcCompat="@drawable/ic_eye_icon_svg" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/passwordHideImageShow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toTopOf="@+id/password_separator"
+                        app:layout_constraintEnd_toEndOf="@+id/password_separator"
+                        app:srcCompat="@drawable/password_hide_icon" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        app:layout_constraintStart_toStartOf="@+id/passwordIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/passwordErrorTextView"
+                        app:srcCompat="@drawable/ic_face_icon_svg" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/biometric_login"
+                        android:textColor="@color/grey_color_two"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintStart_toStartOf="@+id/passwordTextView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/forgotPasswordLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/colaba_apptheme_blue"
+                        app:layout_constraintStart_toStartOf="@+id/imageView4"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/loginBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="27dp"
+                        android:background="@drawable/app_button_style"
+                        android:text="@string/login"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/rubik_medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/forgotPasswordLink" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="26dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text=""
+                        android:theme="@style/Color1SwitchStyle"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="323dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/emailErrorTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/email_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/email_separator" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/passwordErrorTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/email_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/password_separator" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/paperBg"
+                android:layout_width="wrap_content"
+                android:layout_height="228dp"
+                android:layout_marginTop="224dp"
+                android:alpha="0.5"
+                android:background="@drawable/ic_bg_paper_svg"
+                android:translationX="-75dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/login_box" />
+
+            <ProgressBar
+                android:id="@+id/loader_login_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="64dp"
+                android:layout_marginBottom="64dp"
+                android:elevation="10dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colaba_apptheme_blue"
+                android:indeterminateTintMode="src_atop"
+                android:translationZ="10dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

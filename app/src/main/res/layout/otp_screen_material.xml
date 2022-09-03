@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colaba_primary_color_with_alpha_one"
+    android:orientation="vertical">
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scrollbars="none"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"> -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_otp_verify"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colaba_primary_color_with_alpha_one"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:translationX="38dp"
+            android:translationY="-38dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView9"
+            app:srcCompat="@drawable/ic_message_svg" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:text="@string/phone_number_verification"
+            android:textColor="@color/grey_color_one"
+            android:textSize="20sp"
+            app:fontFamily="@font/rubik_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/phoneMessageTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:text="@string/enter_the_code_sent_to"
+            android:textColor="@color/grey_color_one"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07"
+            app:srcCompat="@drawable/png_logo" />
+
+        <!-- <androidx.cardview.widget.CardView
+             android:id="@+id/login_box"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="18dp"
+             android:layout_marginTop="40dp"
+             android:layout_marginEnd="18dp"
+             app:cardCornerRadius="8dp"
+             app:cardElevation="8dp"
+             app:cardUseCompatPadding="true"
+             app:layout_constraintCircleRadius="8dp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/phoneMessageTextView"> -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/login_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneMessageTextView"
+            android:background="@drawable/content_bg_signupflow">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inside_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_otp_verify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rubik_regular"
+                    android:hint="@string/mobile_verification_code"
+                    android:textColorHint="@color/primary_info_label_color"
+                    app:boxCollapsedPaddingTop="1dp"
+                    app:boxStrokeColor="@color/primary_info_line_color"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="1dp"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextAppearance="@style/inputError"
+                    app:helperTextTextColor="@color/colaba_red_color"
+                    app:hintTextAppearance="@style/TextAppearence.App.Login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/otpCodeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:digits="1234567890"
+                        android:ems="10"
+                        android:fontFamily="@font/rubik_regular"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:paddingStart="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/rubik_regular" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/verifyBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="27dp"
+                    android:background="@drawable/app_button_style"
+                    android:enabled="false"
+                    android:text="@string/verify"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/rubik_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/permission_checkbox" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/permission_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:buttonTint="@color/colaba_apptheme_blue"
+                    android:fontFamily="@font/rubik_regular"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="@string/do_not_ask_again"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/til_otp_verify"
+                    app:layout_constraintTop_toBottomOf="@+id/timer_constraintlayout" />
+
+                <ImageView
+                    android:id="@+id/tick_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/til_otp_verify"
+                    app:layout_constraintEnd_toEndOf="@+id/til_otp_verify"
+                    app:layout_constraintTop_toTopOf="@+id/til_otp_verify"
+                    app:srcCompat="@drawable/check" />
+
+                <ImageView
+                    android:id="@+id/cross_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/til_otp_verify"
+                    app:layout_constraintEnd_toEndOf="@+id/til_otp_verify"
+                    app:layout_constraintTop_toTopOf="@+id/til_otp_verify"
+                    app:srcCompat="@drawable/cross" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/timer_constraintlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cardview_light_background"
+                    android:backgroundTint="@color/cardview_light_background"
+                    app:layout_constraintEnd_toEndOf="@+id/til_otp_verify"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/til_otp_verify"
+                    app:layout_constraintTop_toBottomOf="@+id/til_otp_verify">
+
+                    <TextView
+                        android:id="@+id/nearToResetTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/did_not_receive_code"
+                        android:textColor="@color/grey_color_one"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/timer_constraintlayout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/resendTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/resend_code"
+                        android:textColor="@color/colaba_apptheme_blue"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/nearToResetTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/nearToResetTextView" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/inside_timer_constraintlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/timerMessageTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:gravity="start"
+                            android:maxLines="4"
+                            android:text="@string/dummy_otp_message"
+                            android:textColor="@color/grey_color_one"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/rubik_regular"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/minuteTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/dummy_minute"
+                            android:textColor="@color/grey_color_one"
+                            android:textSize="28sp"
+                            app:fontFamily="@font/rubik_medium"
+                            app:layout_constraintStart_toStartOf="@+id/timerMessageTextView"
+                            app:layout_constraintTop_toBottomOf="@+id/timerMessageTextView" />
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/min"
+                            android:textColor="@color/grey_color_three"
+                            android:textSize="18sp"
+                            app:fontFamily="@font/rubik_medium"
+                            app:layout_constraintBottom_toBottomOf="@+id/minuteTextView"
+                            app:layout_constraintStart_toEndOf="@+id/minuteTextView" />
+
+                        <TextView
+                            android:id="@+id/secondTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginBottom="2dp"
+                            android:text="@string/dummy_seconds"
+                            android:textColor="@color/grey_color_one"
+                            android:textSize="28sp"
+                            app:fontFamily="@font/rubik_medium"
+                            app:layout_constraintBottom_toBottomOf="@+id/minuteTextView"
+                            app:layout_constraintStart_toEndOf="@+id/textView17" />
+
+                        <TextView
+                            android:id="@+id/completeAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="68dp"
+                            android:text="@string/sec"
+                            android:textColor="@color/grey_color_three"
+                            android:textSize="18sp"
+                            app:fontFamily="@font/rubik_medium"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                            app:layout_constraintStart_toEndOf="@+id/textView17" />
+
+                        <ImageView
+                            android:id="@+id/imageView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/secondTextView"
+                            app:layout_constraintStart_toEndOf="@+id/completeAddress"
+                            app:layout_constraintTop_toTopOf="@+id/secondTextView"
+                            app:srcCompat="@drawable/timer_icon" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/imageView6"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:translationX="-64dp"
+              app:layout_constraintTop_toBottomOf="@+id/login_box"
+              app:layout_constraintStart_toStartOf="parent"
+              app:srcCompat="@drawable/one_paper_svg" /> -->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/one_paper_svg"
+            android:translationX="-64dp"
+            android:translationZ="-50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/login_box" />
+
+        <ProgressBar
+            android:id="@+id/loader_otp_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="64dp"
+            android:elevation="10dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colaba_apptheme_blue"
+            android:indeterminateTintMode="src_atop"
+            android:translationZ="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+
+
+    <!-- before shadow
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colaba_primary_color_with_alpha_one"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_otp_verify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colaba_primary_color_with_alpha_one"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:translationX="38dp"
+                    android:translationY="-38dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView9"
+                    app:srcCompat="@drawable/ic_message_svg" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:text="@string/phone_number_verification"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="20sp"
+                    app:fontFamily="@font/rubik_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+                <TextView
+                    android:id="@+id/phoneMessageTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="50dp"
+                    android:gravity="center"
+                    android:text="@string/enter_the_code_sent_to"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.07"
+                    app:srcCompat="@drawable/png_logo" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/login_box"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="18dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintCircleRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneMessageTextView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/inside_constraintlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="40dp"
+                        android:paddingBottom="40dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_otp_verify"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginEnd="25dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/rubik_regular"
+                            android:hint="@string/mobile_verification_code"
+                            android:textColorHint="@color/primary_info_label_color"
+                            app:boxCollapsedPaddingTop="1dp"
+                            app:boxStrokeColor="@color/primary_info_line_color"
+                            app:boxStrokeWidth="1dp"
+                            app:boxStrokeWidthFocused="1dp"
+                            app:helperTextEnabled="true"
+                            app:helperTextTextAppearance="@style/inputError"
+                            app:helperTextTextColor="@color/colaba_red_color"
+                            app:hintTextAppearance="@style/TextAppearence.App.Login"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/otpCodeEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:digits="1234567890"
+                                android:ems="10"
+                                android:fontFamily="@font/rubik_regular"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:paddingStart="0dp"
+                                android:singleLine="true"
+                                android:textColor="@color/grey_color_one"
+                                android:textSize="14sp"
+                                app:fontFamily="@font/rubik_regular" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/verifyBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="27dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="27dp"
+                            android:background="@drawable/app_button_style"
+                            android:enabled="false"
+                            android:text="@string/verify"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/rubik_medium"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/permission_checkbox" />
+
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/permission_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:buttonTint="@color/colaba_apptheme_blue"
+                            android:fontFamily="@font/rubik_regular"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:text="@string/do_not_ask_again"
+                            android:textColor="@color/grey_color_one"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@+id/til_otp_verify"
+                            app:layout_constraintTop_toBottomOf="@+id/timer_constraintlayout" />
+
+                        <ImageView
+                            android:id="@+id/tick_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            app:layout_constraintBottom_toBottomOf="@+id/til_otp_verify"
+                            app:layout_constraintEnd_toEndOf="@+id/til_otp_verify"
+                            app:layout_constraintTop_toTopOf="@+id/til_otp_verify"
+                            app:srcCompat="@drawable/check" />
+
+                        <ImageView
+                            android:id="@+id/cross_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            app:layout_constraintBottom_toBottomOf="@+id/til_otp_verify"
+                            app:layout_constraintEnd_toEndOf="@+id/til_otp_verify"
+                            app:layout_constraintTop_toTopOf="@+id/til_otp_verify"
+                            app:srcCompat="@drawable/cross" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/timer_constraintlayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/cardview_light_background"
+                            android:backgroundTint="@color/cardview_light_background"
+                            app:layout_constraintEnd_toEndOf="@+id/til_otp_verify"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/til_otp_verify"
+                            app:layout_constraintTop_toBottomOf="@+id/til_otp_verify">
+
+                            <TextView
+                                android:id="@+id/nearToResetTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/did_not_receive_code"
+                                android:textColor="@color/grey_color_one"
+                                android:textSize="14sp"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="@+id/timer_constraintlayout"
+
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/resendTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/resend_code"
+                                android:textColor="@color/colaba_apptheme_blue"
+                                android:textSize="14sp"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="@+id/nearToResetTextView"
+                                app:layout_constraintTop_toBottomOf="@+id/nearToResetTextView" />
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/inside_timer_constraintlayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/timerMessageTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:gravity="start"
+                                    android:maxLines="4"
+                                    android:text="@string/dummy_otp_message"
+                                    android:textColor="@color/grey_color_one"
+                                    android:textSize="14sp"
+                                    app:fontFamily="@font/rubik_regular"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/minuteTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:text="@string/dummy_minute"
+                                    android:textColor="@color/grey_color_one"
+                                    android:textSize="28sp"
+                                    app:fontFamily="@font/rubik_medium"
+                                    app:layout_constraintStart_toStartOf="@+id/timerMessageTextView"
+                                    app:layout_constraintTop_toBottomOf="@+id/timerMessageTextView" />
+
+                                <TextView
+                                    android:id="@+id/textView17"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:text="@string/min"
+                                    android:textColor="@color/grey_color_three"
+                                    android:textSize="18sp"
+                                    app:fontFamily="@font/rubik_medium"
+                                    app:layout_constraintBottom_toBottomOf="@+id/minuteTextView"
+                                    app:layout_constraintStart_toEndOf="@+id/minuteTextView" />
+
+                                <TextView
+                                    android:id="@+id/secondTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:text="@string/dummy_seconds"
+                                    android:textColor="@color/grey_color_one"
+                                    android:textSize="28sp"
+                                    app:fontFamily="@font/rubik_medium"
+                                    app:layout_constraintBottom_toBottomOf="@+id/minuteTextView"
+                                    app:layout_constraintStart_toEndOf="@+id/textView17" />
+
+                                <TextView
+                                    android:id="@+id/completeAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="68dp"
+                                    android:text="@string/sec"
+                                    android:textColor="@color/grey_color_three"
+                                    android:textSize="18sp"
+                                    app:fontFamily="@font/rubik_medium"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                                    app:layout_constraintStart_toEndOf="@+id/textView17" />
+
+                                <ImageView
+                                    android:id="@+id/imageView12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="13dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/secondTextView"
+                                    app:layout_constraintStart_toEndOf="@+id/completeAddress"
+                                    app:layout_constraintTop_toTopOf="@+id/secondTextView"
+                                    app:srcCompat="@drawable/timer_icon" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:translationX="-64dp"
+                    android:translationY="102dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/login_box"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/one_paper_svg" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/paperBg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="224dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/ic_bg_paper_svg"
+                    android:translationX="-75dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/login_box"
+                    android:visibility="invisible"/>
+
+
+                <ProgressBar
+                    android:id="@+id/loader_otp_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginBottom="64dp"
+                    android:elevation="10dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/colaba_apptheme_blue"
+                    android:indeterminateTintMode="src_atop"
+                    android:translationZ="10dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout> -->

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/assets_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:padding="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/tab_top_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_grey_cross" />
+
+        <TextView
+            android:id="@+id/borrower_name_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Gift Funds"
+            android:textColor="@color/grey_color_one"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/borrower_purpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/rubik_light"
+            android:text="@string/empty"
+            android:textAllCaps="true"
+            android:textColor="@color/grey_color_three"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/borrower_name_greeting" />
+
+        <View
+            android:id="@+id/tab_top_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colaba_app_border_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/top_del_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:padding="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:srcCompat="@drawable/ic_grey_del" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/gift_source_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:background="@android:color/transparent"
+        android:hint="Gift Source"
+        android:textColorHint="@color/primary_info_label_color"
+        app:boxCollapsedPaddingTop="1dp"
+        app:boxStrokeColor="@color/primary_info_line_color"
+        app:boxStrokeWidth="0.5dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:endIconDrawable="@drawable/ic_down_arrow"
+        app:endIconMode="custom"
+        app:endIconTint="@color/grey_color_three"
+        app:helperTextEnabled="true"
+        app:helperTextTextAppearance="@style/inputError"
+
+        app:helperTextTextColor="@color/colaba_red_color"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+
+        app:hintTextColor="@color/grey_color_two"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assets_top_container">
+
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/gift_source_auto_compelete_view"
+            style="@style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:backgroundTint="@android:color/transparent"
+            android:completionThreshold="1"
+
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:spinnerMode="dropdown"
+
+            android:textAlignment="gravity"
+            android:textColor="@color/grey_color_one"
+            android:textColorHint="@color/grey_color_three"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/gift_type_constraintlayout"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gift_source_input_layout"
+        >
+
+    <TextView
+        android:id="@+id/radio_label_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="Gift Type"
+        android:textColor="@color/grey_color_two"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_label_text_view">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/cash_gift"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Cash Gift"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            android:paddingStart="15dp"
+            android:button="@drawable/radiodraw"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/gift_of_equity"
+            android:layout_width="200dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Gift Of Equity"
+            android:textColor="@color/grey_color_one"
+            android:textSize="15sp"
+            android:paddingStart="15dp"
+            android:button="@drawable/radiodraw"/>
+    </RadioGroup>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/annual_base_layout"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="22dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/rubik_light"
+            android:hint="Cash Value"
+            android:textColorHint="@color/primary_info_label_color"
+            app:boxCollapsedPaddingTop="1dp"
+            app:boxStrokeColor="@color/primary_info_line_color"
+            app:boxStrokeWidth="0.5dp"
+
+
+            app:boxStrokeWidthFocused="1dp"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/inputError"
+
+            app:helperTextTextColor="@color/colaba_red_color"
+            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+
+            app:hintTextColor="@color/grey_color_two"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/annual_base_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+
+                android:ems="10"
+                android:fontFamily="@font/rubik_regular"
+
+                android:gravity="top|start"
+                android:imeOptions="actionNone"
+                android:inputType="numberDecimal"
+
+                android:lines="10"
+
+                android:maxLines="10"
+                android:minLines="1"
+                android:paddingStart="0dp"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+
+
+                android:textColor="@color/grey_color_one"
+
+                android:textSize="@dimen/ed_txt_size_primary_info" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/gift_transfer_constraintlayout"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gift_type_constraintlayout"
+    >
+
+
+            <TextView
+                android:id="@+id/gift_deposit_text_view"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Has this gift been deposited already?"
+                android:textColor="@color/grey_color_two"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RadioGroup
+                android:id="@+id/gift_deposit_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gift_deposit_text_view">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/yes_deposited"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/yes"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:paddingStart="15dp"
+                    android:button="@drawable/radiodraw"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/no_deposited"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/no"
+                    android:textColor="@color/grey_color_one"
+                    android:textSize="15sp"
+                    android:paddingStart="15dp"
+                    android:button="@drawable/radiodraw" />
+            </RadioGroup>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_transfer_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="22dp"
+        android:fontFamily="@font/rubik_light"
+        android:hint="Expected Date of Transfer (MM/DD/YYYY)"
+
+        android:textColorHint="@color/primary_info_label_color"
+        app:boxCollapsedPaddingTop="1dp"
+        app:boxStrokeColor="@color/primary_info_line_color"
+        app:boxStrokeWidth="0.5dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:endIconDrawable="@drawable/ic_move_to_icon"
+        app:endIconMode="custom"
+        app:helperTextEnabled="true"
+        app:helperTextTextAppearance="@style/inputError"
+        app:helperTextTextColor="@color/colaba_red_color"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+        app:hintTextColor="@color/grey_color_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gift_transfer_constraintlayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/date_of_transfer_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:fontFamily="@font/rubik_regular"
+            android:imeOptions="actionDone"
+            android:inputType="none"
+            android:paddingStart="0dp"
+            android:singleLine="true"
+            android:textColor="@color/grey_color_one"
+            android:textSize="@dimen/ed_txt_size_primary_info"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <ImageView
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_save"
+        app:elevation="3dp"
+        android:translationX="18dp"
+        android:translationY="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
