@@ -6,6 +6,7 @@
     android:layout_marginTop="10dp"
     android:orientation="vertical">
 
+<!--
     <com.blure.complexview.ComplexView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -29,6 +30,6 @@
                 android:text="Shadow" />
         </com.blure.complexview.ComplexView>
     </com.blure.complexview.ComplexView>
-
+-->
 
 </RelativeLayout>

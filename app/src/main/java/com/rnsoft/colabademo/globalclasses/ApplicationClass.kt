@@ -4,8 +4,12 @@ import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 import androidx.lifecycle.ProcessLifecycleOwner
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import com.google.android.libraries.places.api.Places
+import com.rnsoft.colabademo.globalclasses.NewAppLifeCycleObserver
 import timber.log.Timber
 
 
@@ -26,7 +30,16 @@ open class ApplicationClass : Application()
         super.onCreate()
         //registerActivityLifecycleCallbacks(AppLifecycleTracker(applicationContext))
         val appLifecycleObserver = AppLifecycleObserver(applicationContext)
+
+        // First-Way
         ProcessLifecycleOwner.get().lifecycle.addObserver(appLifecycleObserver)
+
+        // Second-Way
+        //ProcessLifecycleOwner.get().lifecycle.addObserver(NewAppLifeCycleObserver(this));
+
+        // Third-Way
+        //ProcessLifecycleOwner.get().lifecycle.addObserver(NewAppLifeCycleObserver(this));
+
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
@@ -38,6 +51,34 @@ open class ApplicationClass : Application()
         // See API Key Best Practices for more information on how to secure your API key:
         // https://developers.google.com/maps/api-key-best-practices
         Places.initialize(this, "AIzaSyBzPEiQOTReBzy6W1UcIyHApPu7_5Die6w")
+    }
+
+
+
+    var defaultLifecycleObserver = object : DefaultLifecycleObserver {
+
+        override fun onStart(owner: LifecycleOwner) {
+            super.onStart(owner)
+            if (AppSetting.userHasLoggedIn && !AppSetting.initialScreenLoaded) {
+                AppSetting.initialScreenLoaded = true
+                if (AppSetting.biometricEnabled) {
+                    val intent = Intent(this@ApplicationClass, WelcomeActivity::class.java)
+                    intent.putExtra(AppSetting.lockAppState, true)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    this@ApplicationClass.startActivity(intent)
+                } else {
+                    val intent = Intent(this@ApplicationClass, SignUpFlowActivity::class.java)
+                    intent.putExtra(AppSetting.lockAppState, true)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    this@ApplicationClass.startActivity(intent)
+                }
+            }
+        }
+
+        override fun onStop(owner: LifecycleOwner) {
+            super.onStop(owner)
+            //your code here
+        }
     }
 
 }
