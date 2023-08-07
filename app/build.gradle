@@ -89,7 +89,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.BluRe-CN:ComplexView:v1.1'
+    //implementation 'com.github.BluRe-CN:ComplexView:v1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     implementation 'androidx.appcompat:appcompat:1.5.0'
